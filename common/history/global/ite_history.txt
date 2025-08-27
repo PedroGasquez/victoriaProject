@@ -1,0 +1,5 @@
+﻿GLOBAL = {
+	every_country = {
+		ite_apply_traits = yes
+	}
+}

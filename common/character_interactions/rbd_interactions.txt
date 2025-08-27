@@ -1,0 +1,113 @@
+﻿rbd_promulgate_law = {
+	icon = "gfx/interface/icons/lens_toolbar_icons/unused/grant_recognition.dds"
+
+	potential = {
+		is_ruler = yes
+		owner = scope:actor
+		owner = {
+			has_law = law_type:law_autocracy
+			enacting_any_law = yes
+		}
+	}
+
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		owner = {
+			enactment_phase >= 1
+		}
+		OR = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value >= neutral
+			}
+			owner = {
+				any_political_movement = {
+					movement_supports_enaction = yes
+					is_insurrectionary = yes
+				}
+			}
+		}
+		owner = {
+			authority >= 200
+			legitimacy > 50
+		}
+	}
+
+	effect = {
+		owner = {
+			activate_law = owner.currently_enacting_law.type
+			every_interest_group = {
+				if = {
+					limit = {
+						law_stance = {
+							law = owner.currently_enacting_law.type
+							value = strongly_approve
+						}
+					}
+					owner = {
+						add_loyalists = {
+							value = small_radicals
+							interest_group = PREV
+						}
+					}
+				} else_if = {
+					limit = {
+						law_stance = {
+							law = owner.currently_enacting_law.type
+							value = approve
+						}
+					}
+					#no impact
+				} else_if = {
+					limit = {
+						law_stance = {
+							law = owner.currently_enacting_law.type
+							value = neutral
+						}
+						is_in_government = no
+					}
+					owner = {
+						add_radicals = {
+							value = medium_radicals
+							interest_group = PREV
+						}
+					}
+				} else_if = {
+					limit = {
+						law_stance = {
+							law = owner.currently_enacting_law.type
+							value = disapprove
+						}
+					}
+					owner = {
+						add_radicals = {
+							value = large_radicals
+							interest_group = PREV
+						}
+					}
+				} else_if = {
+					limit = {
+						law_stance = {
+							law = owner.currently_enacting_law.type
+							value = strongly_disapprove
+						}
+					}
+					owner = {
+						add_radicals = {
+							value = very_large_radicals
+							interest_group = PREV
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = rbd_promulgated_law
+				years = 4
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}

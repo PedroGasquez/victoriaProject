@@ -1,0 +1,10 @@
+NPops = {
+
+## Mass Migrations ##
+	
+	MASS_MIGRATION_TARGET_MIN_ARABLE_LAND = 10									# A state must have at least this much arable land to be a mass migration target
+	
+	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 2							# Countries with at least this number of possible target states do not receive any penalty to their mass migration target score
+	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.175							# Mass migration target score is reduced by a fraction of itself equal to this times number of possible target states less than MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY. Or Score = Score - Score * this * PossibleStatesDiff
+
+}

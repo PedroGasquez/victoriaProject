@@ -1,0 +1,7 @@
+﻿l_simp_chinese:
+
+zw_decision_pruchase_port_said_for_suez_canal: "$suez_canal_purchase$"
+zw_decision_pruchase_port_said_for_suez_canal_desc: ""
+
+notification_zw_noti_pruchase_port_said_for_suez_canal_name: "$suez_sale$"
+notification_zw_noti_pruchase_port_said_for_suez_canal_desc: "由于修建运河的需要，我们被迫出售$HUB_NAME_STATE_SINAI_city$。"

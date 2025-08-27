@@ -1,0 +1,2201 @@
+﻿on_yearly_pulse_country = {
+	on_actions = {
+		EC_cleanup_on_actions
+	}
+}
+
+EC_cleanup_on_actions = {
+	effect = {
+		every_country = {
+	
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_north_german
+				NOT = { country_has_primary_culture = cu:north_german }
+			}
+			remove_variable = EC_has_pc_north_german
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_south_german
+				NOT = { country_has_primary_culture = cu:south_german }
+			}
+			remove_variable = EC_has_pc_south_german
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_ashkenazi
+				NOT = { country_has_primary_culture = cu:ashkenazi }
+			}
+			remove_variable = EC_has_pc_ashkenazi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_dutch
+				NOT = { country_has_primary_culture = cu:dutch }
+			}
+			remove_variable = EC_has_pc_dutch
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_flemish
+				NOT = { country_has_primary_culture = cu:flemish }
+			}
+			remove_variable = EC_has_pc_flemish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_wallonian
+				NOT = { country_has_primary_culture = cu:wallonian }
+			}
+			remove_variable = EC_has_pc_wallonian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_boer
+				NOT = { country_has_primary_culture = cu:boer }
+			}
+			remove_variable = EC_has_pc_boer
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_alemannic
+				NOT = { country_has_primary_culture = cu:alemannic }
+			}
+			remove_variable = EC_has_pc_alemannic
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_swedish
+				NOT = { country_has_primary_culture = cu:swedish }
+			}
+			remove_variable = EC_has_pc_swedish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_danish
+				NOT = { country_has_primary_culture = cu:danish }
+			}
+			remove_variable = EC_has_pc_danish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_norwegian
+				NOT = { country_has_primary_culture = cu:norwegian }
+			}
+			remove_variable = EC_has_pc_norwegian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_icelandic
+				NOT = { country_has_primary_culture = cu:icelandic }
+			}
+			remove_variable = EC_has_pc_icelandic
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_finnish
+				NOT = { country_has_primary_culture = cu:finnish }
+			}
+			remove_variable = EC_has_pc_finnish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_sami
+				NOT = { country_has_primary_culture = cu:sami }
+			}
+			remove_variable = EC_has_pc_sami
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized }
+				has_variable = EC_has_pc_british
+				NOT = { country_has_primary_culture = cu:british }
+			}
+			remove_variable = EC_has_pc_british
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:irish }
+				has_variable = EC_has_pc_irish
+			}
+			remove_variable = EC_has_pc_irish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:australian }
+				has_variable = EC_has_pc_australian
+			}
+			remove_variable = EC_has_pc_australian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:north_italian }
+				has_variable = EC_has_pc_north_italian
+			}
+			remove_variable = EC_has_pc_north_italian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:south_italian }
+				has_variable = EC_has_pc_south_italian
+			}
+			remove_variable = EC_has_pc_south_italian
+		} 
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:maltese }
+				has_variable = EC_has_pc_maltese
+			}
+			remove_variable = EC_has_pc_maltese
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:basque }
+				has_variable = EC_has_pc_basque
+			}
+			remove_variable = EC_has_pc_basque
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:spanish }
+				has_variable = EC_has_pc_spanish
+			}
+			remove_variable = EC_has_pc_spanish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:catalan }
+				has_variable = EC_has_pc_catalan
+			}
+			remove_variable = EC_has_pc_catalan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:portuguese }
+				has_variable = EC_has_pc_portuguese
+			}
+			remove_variable = EC_has_pc_portuguese
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:french }
+				has_variable = EC_has_pc_french
+			}
+			remove_variable = EC_has_pc_french
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:occitan }
+				has_variable = EC_has_pc_occitan
+			}
+			remove_variable = EC_has_pc_occitan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:breton }
+				has_variable = EC_has_pc_breton
+			}
+			remove_variable = EC_has_pc_breton
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:croat }
+				has_variable = EC_has_pc_croat
+			}
+			remove_variable = EC_has_pc_croat
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:serb }
+				has_variable = EC_has_pc_serb
+			}
+			remove_variable = EC_has_pc_serb
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bulgarian }
+				has_variable = EC_has_pc_bulgarian
+			}
+			remove_variable = EC_has_pc_bulgarian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:albanian }
+				has_variable = EC_has_pc_albanian
+			}
+			remove_variable = EC_has_pc_albanian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:slovene }
+				has_variable = EC_has_pc_slovene
+			}
+			remove_variable = EC_has_pc_slovene
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bosniak }
+				has_variable = EC_has_pc_bosniak
+			}
+			remove_variable = EC_has_pc_bosniak
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:romanian }
+				has_variable = EC_has_pc_romanian
+			}
+			remove_variable = EC_has_pc_romanian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:hungarian }
+				has_variable = EC_has_pc_hungarian
+			}
+			remove_variable = EC_has_pc_hungarian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:szekely }
+				has_variable = EC_has_pc_szekely
+			}
+			remove_variable = EC_has_pc_szekely
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:polish }
+				has_variable = EC_has_pc_polish
+			}
+			remove_variable = EC_has_pc_polish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:lithuanian }
+				has_variable = EC_has_pc_lithuanian
+			}
+			remove_variable = EC_has_pc_lithuanian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:czech }
+				has_variable = EC_has_pc_czech
+			}
+			remove_variable = EC_has_pc_czech
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:slovak }
+				has_variable = EC_has_pc_slovak
+			}
+			remove_variable = EC_has_pc_slovak
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:russian }
+				has_variable = EC_has_pc_russian
+			}
+			remove_variable = EC_has_pc_russian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:byelorussian }
+				has_variable = EC_has_pc_byelorussian
+			}
+			remove_variable = EC_has_pc_byelorussian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:ukrainian }
+				has_variable = EC_has_pc_ukrainian
+			}
+			remove_variable = EC_has_pc_ukrainian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:ugrian }
+				has_variable = EC_has_pc_ugrian
+			}
+			remove_variable = EC_has_pc_ugrian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:latvian }
+				has_variable = EC_has_pc_latvian
+			}
+			remove_variable = EC_has_pc_latvian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:estonian }
+				has_variable = EC_has_pc_estonian
+			}
+			remove_variable = EC_has_pc_estonian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:greek }
+				has_variable = EC_has_pc_greek
+			}
+			remove_variable = EC_has_pc_greek
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:georgian }
+				has_variable = EC_has_pc_georgian
+			}
+			remove_variable = EC_has_pc_georgian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:armenian }
+				has_variable = EC_has_pc_armenian
+			}
+			remove_variable = EC_has_pc_armenian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sephardic }
+				has_variable = EC_has_pc_sephardic
+			}
+			remove_variable = EC_has_pc_sephardic
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:turkish }
+				has_variable = EC_has_pc_turkish
+			}
+			remove_variable = EC_has_pc_turkish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:azerbaijani }
+				has_variable = EC_has_pc_azerbaijani
+			}
+			remove_variable = EC_has_pc_azerbaijani
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:north_caucasian }
+				has_variable = EC_has_pc_north_caucasian
+			}
+			remove_variable = EC_has_pc_north_caucasian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:maghrebi }
+				has_variable = EC_has_pc_maghrebi
+			}
+			remove_variable = EC_has_pc_maghrebi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:misri }
+				has_variable = EC_has_pc_misri
+			}
+			remove_variable = EC_has_pc_misri
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:mashriqi }
+				has_variable = EC_has_pc_mashriqi
+			}
+			remove_variable = EC_has_pc_mashriqi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bedouin }
+				has_variable = EC_has_pc_bedouin
+			}
+			remove_variable = EC_has_pc_bedouin
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:berber }
+				has_variable = EC_has_pc_berber
+			}
+			remove_variable = EC_has_pc_berber
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:persian }
+				has_variable = EC_has_pc_persian
+			}
+			remove_variable = EC_has_pc_persian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:uzbek }
+				has_variable = EC_has_pc_uzbek
+			}
+			remove_variable = EC_has_pc_uzbek
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kazak }
+				has_variable = EC_has_pc_kazak
+			}
+			remove_variable = EC_has_pc_kazak
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kirgiz }
+				has_variable = EC_has_pc_kirgiz
+			}
+			remove_variable = EC_has_pc_kirgiz
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tajik }
+				has_variable = EC_has_pc_tajik
+			}
+			remove_variable = EC_has_pc_tajik
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:uighur }
+				has_variable = EC_has_pc_uighur
+			}
+			remove_variable = EC_has_pc_uighur
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:pashtun }
+				has_variable = EC_has_pc_pashtun
+			}
+			remove_variable = EC_has_pc_pashtun
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:baluchi }
+				has_variable = EC_has_pc_baluchi
+			}
+			remove_variable = EC_has_pc_baluchi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:hazara }
+				has_variable = EC_has_pc_hazara
+			}
+			remove_variable = EC_has_pc_hazara
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:turkmen }
+				has_variable = EC_has_pc_turkmen
+			}
+			remove_variable = EC_has_pc_turkmen
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kurdish }
+				has_variable = EC_has_pc_kurdish
+			}
+			remove_variable = EC_has_pc_kurdish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tatar }
+				has_variable = EC_has_pc_tatar
+			}
+			remove_variable = EC_has_pc_tatar
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:mongol }
+				has_variable = EC_has_pc_mongol
+			}
+			remove_variable = EC_has_pc_mongol
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kalmyk }
+				has_variable = EC_has_pc_kalmyk
+			}
+			remove_variable = EC_has_pc_kalmyk
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:siberian }
+				has_variable = EC_has_pc_siberian
+			}
+			remove_variable = EC_has_pc_siberian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:yakut }
+				has_variable = EC_has_pc_yakut
+			}
+			remove_variable = EC_has_pc_yakut
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tibetan }
+				has_variable = EC_has_pc_tibetan
+			}
+			remove_variable = EC_has_pc_tibetan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:assamese }
+				has_variable = EC_has_pc_assamese
+			}
+			remove_variable = EC_has_pc_assamese
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bengali }
+				has_variable = EC_has_pc_bengali
+			}
+			remove_variable = EC_has_pc_bengali
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bihari }
+				has_variable = EC_has_pc_bihari
+			}
+			remove_variable = EC_has_pc_bihari
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:manipuri }
+				has_variable = EC_has_pc_manipuri
+			}
+			remove_variable = EC_has_pc_manipuri
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:nepali }
+				has_variable = EC_has_pc_nepali
+			}
+			remove_variable = EC_has_pc_nepali
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:oriya }
+				has_variable = EC_has_pc_oriya
+			}
+			remove_variable = EC_has_pc_oriya
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sinhala }
+				has_variable = EC_has_pc_sinhala
+			}
+			remove_variable = EC_has_pc_sinhala
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:avadhi }
+				has_variable = EC_has_pc_avadhi
+			}
+			remove_variable = EC_has_pc_avadhi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kanauji }
+				has_variable = EC_has_pc_kanauji
+			}
+			remove_variable = EC_has_pc_kanauji
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:panjabi }
+				has_variable = EC_has_pc_panjabi
+			}
+			remove_variable = EC_has_pc_panjabi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kashmiri }
+				has_variable = EC_has_pc_kashmiri
+			}
+			remove_variable = EC_has_pc_kashmiri
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:gujarati }
+				has_variable = EC_has_pc_gujarati
+			}
+			remove_variable = EC_has_pc_gujarati
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:marathi }
+				has_variable = EC_has_pc_marathi
+			}
+			remove_variable = EC_has_pc_marathi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sindi }
+				has_variable = EC_has_pc_sindi
+			}
+			remove_variable = EC_has_pc_sindi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:rajput }
+				has_variable = EC_has_pc_rajput
+			}
+			remove_variable = EC_has_pc_rajput
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kannada }
+				has_variable = EC_has_pc_kannada
+			}
+			remove_variable = EC_has_pc_kannada
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:malayalam }
+				has_variable = EC_has_pc_malayalam
+			}
+			remove_variable = EC_has_pc_malayalam
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tamil }
+				has_variable = EC_has_pc_tamil
+			}
+			remove_variable = EC_has_pc_tamil
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:telegu }
+				has_variable = EC_has_pc_telegu
+			}
+			remove_variable = EC_has_pc_telegu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:vietnamese }
+				has_variable = EC_has_pc_vietnamese
+			}
+			remove_variable = EC_has_pc_vietnamese
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:khmer }
+				has_variable = EC_has_pc_khmer
+			}
+			remove_variable = EC_has_pc_khmer
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:batak }
+				has_variable = EC_has_pc_batak
+			}
+			remove_variable = EC_has_pc_batak
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:dayak }
+				has_variable = EC_has_pc_dayak
+			}
+			remove_variable = EC_has_pc_dayak
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:malagasy }
+				has_variable = EC_has_pc_malagasy
+			}
+			remove_variable = EC_has_pc_malagasy
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:filipino }
+				has_variable = EC_has_pc_filipino
+			}
+			remove_variable = EC_has_pc_filipino
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:moro }
+				has_variable = EC_has_pc_moro
+			}
+			remove_variable = EC_has_pc_moro
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:javan }
+				has_variable = EC_has_pc_javan
+			}
+			remove_variable = EC_has_pc_javan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:moluccan }
+				has_variable = EC_has_pc_moluccan
+			}
+			remove_variable = EC_has_pc_moluccan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:thai }
+				has_variable = EC_has_pc_thai
+			}
+			remove_variable = EC_has_pc_thai
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:mon }
+				has_variable = EC_has_pc_mon
+			}
+			remove_variable = EC_has_pc_mon
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:khmu }
+				has_variable = EC_has_pc_khmu
+			}
+			remove_variable = EC_has_pc_khmu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:lao }
+				has_variable = EC_has_pc_lao
+			}
+			remove_variable = EC_has_pc_lao
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:shan }
+				has_variable = EC_has_pc_shan
+			}
+			remove_variable = EC_has_pc_shan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:burmese }
+				has_variable = EC_has_pc_burmese
+			}
+			remove_variable = EC_has_pc_burmese
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kachin }
+				has_variable = EC_has_pc_kachin
+			}
+			remove_variable = EC_has_pc_kachin
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:karen }
+				has_variable = EC_has_pc_karen
+			}
+			remove_variable = EC_has_pc_karen
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:japanese }
+				has_variable = EC_has_pc_japanese
+			}
+			remove_variable = EC_has_pc_japanese
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:manchu }
+				has_variable = EC_has_pc_manchu
+			}
+			remove_variable = EC_has_pc_manchu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:han }
+				has_variable = EC_has_pc_han
+			}
+			remove_variable = EC_has_pc_han
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:korean }
+				has_variable = EC_has_pc_korean
+			}
+			remove_variable = EC_has_pc_korean
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:ainu }
+				has_variable = EC_has_pc_ainu
+			}
+			remove_variable = EC_has_pc_ainu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:hakka }
+				has_variable = EC_has_pc_hakka
+			}
+			remove_variable = EC_has_pc_hakka
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:miao }
+				has_variable = EC_has_pc_miao
+			}
+			remove_variable = EC_has_pc_miao
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:min }
+				has_variable = EC_has_pc_min
+			}
+			remove_variable = EC_has_pc_min
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:zhuang }
+				has_variable = EC_has_pc_zhuang
+			}
+			remove_variable = EC_has_pc_zhuang
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:yi }
+				has_variable = EC_has_pc_yi
+			}
+			remove_variable = EC_has_pc_yi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:yue }
+				has_variable = EC_has_pc_yue
+			}
+			remove_variable = EC_has_pc_yue
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:polynesian }
+				has_variable = EC_has_pc_polynesian
+			}
+			remove_variable = EC_has_pc_polynesian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:hawaiian }
+				has_variable = EC_has_pc_hawaiian
+			}
+			remove_variable = EC_has_pc_hawaiian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:melanesian }
+				has_variable = EC_has_pc_melanesian
+			}
+			remove_variable = EC_has_pc_melanesian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:micronesian }
+				has_variable = EC_has_pc_micronesian
+			}
+			remove_variable = EC_has_pc_micronesian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:maori }
+				has_variable = EC_has_pc_maori
+			}
+			remove_variable = EC_has_pc_maori
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:yuanzhumin }
+				has_variable = EC_has_pc_yuanzhumin
+			}
+			remove_variable = EC_has_pc_yuanzhumin
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:aborigine }
+				has_variable = EC_has_pc_aborigine
+			}
+			remove_variable = EC_has_pc_aborigine
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:zapotec }
+				has_variable = EC_has_pc_zapotec
+			}
+			remove_variable = EC_has_pc_zapotec
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:mayan }
+				has_variable = EC_has_pc_mayan
+			}
+			remove_variable = EC_has_pc_mayan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:nahua }
+				has_variable = EC_has_pc_nahua
+			}
+			remove_variable = EC_has_pc_nahua
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tarascan }
+				has_variable = EC_has_pc_tarascan
+			}
+			remove_variable = EC_has_pc_tarascan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:quechua }
+				has_variable = EC_has_pc_quechua
+			}
+			remove_variable = EC_has_pc_quechua
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:guarani }
+				has_variable = EC_has_pc_guarani
+			}
+			remove_variable = EC_has_pc_guarani
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:aimara }
+				has_variable = EC_has_pc_aimara
+			}
+			remove_variable = EC_has_pc_aimara
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:amazonian }
+				has_variable = EC_has_pc_amazonian
+			}
+			remove_variable = EC_has_pc_amazonian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:patagonian }
+				has_variable = EC_has_pc_patagonian
+			}
+			remove_variable = EC_has_pc_patagonian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:guajiro }
+				has_variable = EC_has_pc_guajiro
+			}
+			remove_variable = EC_has_pc_guajiro
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tupinamba }
+				has_variable = EC_has_pc_tupinamba
+			}
+			remove_variable = EC_has_pc_tupinamba
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:metis }
+				has_variable = EC_has_pc_metis
+			}
+			remove_variable = EC_has_pc_metis
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:dakota }
+				has_variable = EC_has_pc_dakota
+			}
+			remove_variable = EC_has_pc_dakota
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:cherokee }
+				has_variable = EC_has_pc_cherokee
+			}
+			remove_variable = EC_has_pc_cherokee
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:muskogean }
+				has_variable = EC_has_pc_muskogean
+			}
+			remove_variable = EC_has_pc_muskogean
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:pueblo }
+				has_variable = EC_has_pc_pueblo
+			}
+			remove_variable = EC_has_pc_pueblo
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:inuit }
+				has_variable = EC_has_pc_inuit
+			}
+			remove_variable = EC_has_pc_inuit
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:cree }
+				has_variable = EC_has_pc_cree
+			}
+			remove_variable = EC_has_pc_cree
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:navajo }
+				has_variable = EC_has_pc_navajo
+			}
+			remove_variable = EC_has_pc_navajo
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:athabaskan }
+				has_variable = EC_has_pc_athabaskan
+			}
+			remove_variable = EC_has_pc_athabaskan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:salish }
+				has_variable = EC_has_pc_salish
+			}
+			remove_variable = EC_has_pc_salish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:nez_perce }
+				has_variable = EC_has_pc_nez_perce
+			}
+			remove_variable = EC_has_pc_nez_perce
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:siouan }
+				has_variable = EC_has_pc_siouan
+			}
+			remove_variable = EC_has_pc_siouan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:comanche }
+				has_variable = EC_has_pc_comanche
+			}
+			remove_variable = EC_has_pc_comanche
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:algonquian }
+				has_variable = EC_has_pc_algonquian
+			}
+			remove_variable = EC_has_pc_algonquian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:iroquoian }
+				has_variable = EC_has_pc_iroquoian
+			}
+			remove_variable = EC_has_pc_iroquoian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:caddoan }
+				has_variable = EC_has_pc_caddoan
+			}
+			remove_variable = EC_has_pc_caddoan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:paiute }
+				has_variable = EC_has_pc_paiute
+			}
+			remove_variable = EC_has_pc_paiute
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:hokan }
+				has_variable = EC_has_pc_hokan
+			}
+			remove_variable = EC_has_pc_hokan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:apache }
+				has_variable = EC_has_pc_apache
+			}
+			remove_variable = EC_has_pc_apache
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:oodham }
+				has_variable = EC_has_pc_oodham
+			}
+			remove_variable = EC_has_pc_oodham
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:mixtec }
+				has_variable = EC_has_pc_mixtec
+			}
+			remove_variable = EC_has_pc_mixtec
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:muisca }
+				has_variable = EC_has_pc_muisca
+			}
+			remove_variable = EC_has_pc_muisca
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:miskito }
+				has_variable = EC_has_pc_miskito
+			}
+			remove_variable = EC_has_pc_miskito
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:cariban }
+				has_variable = EC_has_pc_cariban
+			}
+			remove_variable = EC_has_pc_cariban
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:yankee }
+				has_variable = EC_has_pc_yankee
+			}
+			remove_variable = EC_has_pc_yankee
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:dixie }
+				has_variable = EC_has_pc_dixie
+			}
+			remove_variable = EC_has_pc_dixie
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:mexican }
+				has_variable = EC_has_pc_mexican
+			}
+			remove_variable = EC_has_pc_mexican
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:central_american }
+				has_variable = EC_has_pc_central_american
+			}
+			remove_variable = EC_has_pc_central_american
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:caribeno }
+				has_variable = EC_has_pc_caribeno
+			}
+			remove_variable = EC_has_pc_caribeno
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:north_andean }
+				has_variable = EC_has_pc_north_andean
+			}
+			remove_variable = EC_has_pc_north_andean
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:south_andean }
+				has_variable = EC_has_pc_south_andean
+			}
+			remove_variable = EC_has_pc_south_andean
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:peruvian }
+				has_variable = EC_has_pc_peruvian
+			}
+			remove_variable = EC_has_pc_peruvian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bolivian }
+				has_variable = EC_has_pc_bolivian
+			}
+			remove_variable = EC_has_pc_bolivian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:ecuadorian }
+				has_variable = EC_has_pc_ecuadorian
+			}
+			remove_variable = EC_has_pc_ecuadorian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:chilean }
+				has_variable = EC_has_pc_chilean
+			}
+			remove_variable = EC_has_pc_chilean
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:venezuelan }
+				has_variable = EC_has_pc_venezuelan
+			}
+			remove_variable = EC_has_pc_venezuelan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:argentine }
+				has_variable = EC_has_pc_argentine
+			}
+			remove_variable = EC_has_pc_argentine
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:uruguayan }
+				has_variable = EC_has_pc_uruguayan
+			}
+			remove_variable = EC_has_pc_uruguayan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:paraguayan }
+				has_variable = EC_has_pc_paraguayan
+			}
+			remove_variable = EC_has_pc_paraguayan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:colombian }
+				has_variable = EC_has_pc_colombian
+			}
+			remove_variable = EC_has_pc_colombian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:platinean }
+				has_variable = EC_has_pc_platinean
+			}
+			remove_variable = EC_has_pc_platinean
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:brazilian }
+				has_variable = EC_has_pc_brazilian
+			}
+			remove_variable = EC_has_pc_brazilian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sulista }
+				has_variable = EC_has_pc_sulista
+			}
+			remove_variable = EC_has_pc_sulista
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:nordestino }
+				has_variable = EC_has_pc_nordestino
+			}
+			remove_variable = EC_has_pc_nordestino
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:amazonic }
+				has_variable = EC_has_pc_amazonic
+			}
+			remove_variable = EC_has_pc_amazonic
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:paulista }
+				has_variable = EC_has_pc_paulista
+			}
+			remove_variable = EC_has_pc_paulista
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:afro_american }
+				has_variable = EC_has_pc_afro_american
+			}
+			remove_variable = EC_has_pc_afro_american
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:afro_caribbean }
+				has_variable = EC_has_pc_afro_caribbean
+			}
+			remove_variable = EC_has_pc_afro_caribbean
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:afro_caribeno }
+				has_variable = EC_has_pc_afro_caribeno
+			}
+			remove_variable = EC_has_pc_afro_caribeno
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:afro_brazilian }
+				has_variable = EC_has_pc_afro_brazilian
+			}
+			remove_variable = EC_has_pc_afro_brazilian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:afro_antillean }
+				has_variable = EC_has_pc_afro_antillean
+			}
+			remove_variable = EC_has_pc_afro_antillean
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:akan }
+				has_variable = EC_has_pc_akan
+			}
+			remove_variable = EC_has_pc_akan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bambara }
+				has_variable = EC_has_pc_bambara
+			}
+			remove_variable = EC_has_pc_bambara
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bassa }
+				has_variable = EC_has_pc_bassa
+			}
+			remove_variable = EC_has_pc_bassa
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:dyula }
+				has_variable = EC_has_pc_dyula
+			}
+			remove_variable = EC_has_pc_dyula
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:edo }
+				has_variable = EC_has_pc_edo
+			}
+			remove_variable = EC_has_pc_edo
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:ewe }
+				has_variable = EC_has_pc_ewe
+			}
+			remove_variable = EC_has_pc_ewe
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:fon }
+				has_variable = EC_has_pc_fon
+			}
+			remove_variable = EC_has_pc_fon
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:fulbe }
+				has_variable = EC_has_pc_fulbe
+			}
+			remove_variable = EC_has_pc_fulbe
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:haratin }
+				has_variable = EC_has_pc_haratin
+			}
+			remove_variable = EC_has_pc_haratin
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:hausa }
+				has_variable = EC_has_pc_hausa
+			}
+			remove_variable = EC_has_pc_hausa
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:ibibio }
+				has_variable = EC_has_pc_ibibio
+			}
+			remove_variable = EC_has_pc_ibibio
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:ibo }
+				has_variable = EC_has_pc_ibo
+			}
+			remove_variable = EC_has_pc_ibo
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kissi }
+				has_variable = EC_has_pc_kissi
+			}
+			remove_variable = EC_has_pc_kissi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kru }
+				has_variable = EC_has_pc_kru
+			}
+			remove_variable = EC_has_pc_kru
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:mande }
+				has_variable = EC_has_pc_mande
+			}
+			remove_variable = EC_has_pc_mande
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bidan }
+				has_variable = EC_has_pc_bidan
+			}
+			remove_variable = EC_has_pc_bidan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:mossi }
+				has_variable = EC_has_pc_mossi
+			}
+			remove_variable = EC_has_pc_mossi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:senufo }
+				has_variable = EC_has_pc_senufo
+			}
+			remove_variable = EC_has_pc_senufo
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:songhai }
+				has_variable = EC_has_pc_songhai
+			}
+			remove_variable = EC_has_pc_songhai
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tiv }
+				has_variable = EC_has_pc_tiv
+			}
+			remove_variable = EC_has_pc_tiv
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tuareg }
+				has_variable = EC_has_pc_tuareg
+			}
+			remove_variable = EC_has_pc_tuareg
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:wolof }
+				has_variable = EC_has_pc_wolof
+			}
+			remove_variable = EC_has_pc_wolof
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:yoruba }
+				has_variable = EC_has_pc_yoruba
+			}
+			remove_variable = EC_has_pc_yoruba
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bakongo }
+				has_variable = EC_has_pc_bakongo
+			}
+			remove_variable = EC_has_pc_bakongo
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:baguirmi }
+				has_variable = EC_has_pc_baguirmi
+			}
+			remove_variable = EC_has_pc_baguirmi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:fang }
+				has_variable = EC_has_pc_fang
+			}
+			remove_variable = EC_has_pc_fang
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kanuri }
+				has_variable = EC_has_pc_kanuri
+			}
+			remove_variable = EC_has_pc_kanuri
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:luba }
+				has_variable = EC_has_pc_luba
+			}
+			remove_variable = EC_has_pc_luba
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:lunda }
+				has_variable = EC_has_pc_lunda
+			}
+			remove_variable = EC_has_pc_lunda
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:mongo }
+				has_variable = EC_has_pc_mongo
+			}
+			remove_variable = EC_has_pc_mongo
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sara }
+				has_variable = EC_has_pc_sara
+			}
+			remove_variable = EC_has_pc_sara
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:teda }
+				has_variable = EC_has_pc_teda
+			}
+			remove_variable = EC_has_pc_teda
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:equatorial_bantu }
+				has_variable = EC_has_pc_equatorial_bantu
+			}
+			remove_variable = EC_has_pc_equatorial_bantu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:fluvian_bantu }
+				has_variable = EC_has_pc_fluvian_bantu
+			}
+			remove_variable = EC_has_pc_fluvian_bantu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:nilotic }
+				has_variable = EC_has_pc_nilotic
+			}
+			remove_variable = EC_has_pc_nilotic
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:amhara }
+				has_variable = EC_has_pc_amhara
+			}
+			remove_variable = EC_has_pc_amhara
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:afar }
+				has_variable = EC_has_pc_afar
+			}
+			remove_variable = EC_has_pc_afar
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:azande }
+				has_variable = EC_has_pc_azande
+			}
+			remove_variable = EC_has_pc_azande
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:baganda }
+				has_variable = EC_has_pc_baganda
+			}
+			remove_variable = EC_has_pc_baganda
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:beja }
+				has_variable = EC_has_pc_beja
+			}
+			remove_variable = EC_has_pc_beja
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:dinka }
+				has_variable = EC_has_pc_dinka
+			}
+			remove_variable = EC_has_pc_dinka
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:fur }
+				has_variable = EC_has_pc_fur
+			}
+			remove_variable = EC_has_pc_fur
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kikuyu }
+				has_variable = EC_has_pc_kikuyu
+			}
+			remove_variable = EC_has_pc_kikuyu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:luo }
+				has_variable = EC_has_pc_luo
+			}
+			remove_variable = EC_has_pc_luo
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:maasai }
+				has_variable = EC_has_pc_maasai
+			}
+			remove_variable = EC_has_pc_maasai
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:nuer }
+				has_variable = EC_has_pc_nuer
+			}
+			remove_variable = EC_has_pc_nuer
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:nuba }
+				has_variable = EC_has_pc_nuba
+			}
+			remove_variable = EC_has_pc_nuba
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:oromo }
+				has_variable = EC_has_pc_oromo
+			}
+			remove_variable = EC_has_pc_oromo
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:ruanda }
+				has_variable = EC_has_pc_ruanda
+			}
+			remove_variable = EC_has_pc_ruanda
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:rundi }
+				has_variable = EC_has_pc_rundi
+			}
+			remove_variable = EC_has_pc_rundi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sidama }
+				has_variable = EC_has_pc_sidama
+			}
+			remove_variable = EC_has_pc_sidama
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:somali }
+				has_variable = EC_has_pc_somali
+			}
+			remove_variable = EC_has_pc_somali
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sudanese }
+				has_variable = EC_has_pc_sudanese
+			}
+			remove_variable = EC_has_pc_sudanese
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sukuma }
+				has_variable = EC_has_pc_sukuma
+			}
+			remove_variable = EC_has_pc_sukuma
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:swahili }
+				has_variable = EC_has_pc_swahili
+			}
+			remove_variable = EC_has_pc_swahili
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tigray }
+				has_variable = EC_has_pc_tigray
+			}
+			remove_variable = EC_has_pc_tigray
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:unyamwezi }
+				has_variable = EC_has_pc_unyamwezi
+			}
+			remove_variable = EC_has_pc_unyamwezi
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:lacustrine_bantu }
+				has_variable = EC_has_pc_lacustrine_bantu
+			}
+			remove_variable = EC_has_pc_lacustrine_bantu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:chewa }
+				has_variable = EC_has_pc_chewa
+			}
+			remove_variable = EC_has_pc_chewa
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:herero }
+				has_variable = EC_has_pc_herero
+			}
+			remove_variable = EC_has_pc_herero
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:khoisan }
+				has_variable = EC_has_pc_khoisan
+			}
+			remove_variable = EC_has_pc_khoisan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:lomwe }
+				has_variable = EC_has_pc_lomwe
+			}
+			remove_variable = EC_has_pc_lomwe
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:makua }
+				has_variable = EC_has_pc_makua
+			}
+			remove_variable = EC_has_pc_makua
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:nguni }
+				has_variable = EC_has_pc_nguni
+			}
+			remove_variable = EC_has_pc_nguni
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:ovimbundu }
+				has_variable = EC_has_pc_ovimbundu
+			}
+			remove_variable = EC_has_pc_ovimbundu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sena }
+				has_variable = EC_has_pc_sena
+			}
+			remove_variable = EC_has_pc_sena
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:shona }
+				has_variable = EC_has_pc_shona
+			}
+			remove_variable = EC_has_pc_shona
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sotho }
+				has_variable = EC_has_pc_sotho
+			}
+			remove_variable = EC_has_pc_sotho
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tonga }
+				has_variable = EC_has_pc_tonga
+			}
+			remove_variable = EC_has_pc_tonga
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tswana }
+				has_variable = EC_has_pc_tswana
+			}
+			remove_variable = EC_has_pc_tswana
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:xhosa }
+				has_variable = EC_has_pc_xhosa
+			}
+			remove_variable = EC_has_pc_xhosa
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:yao }
+				has_variable = EC_has_pc_yao
+			}
+			remove_variable = EC_has_pc_yao
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:zulu }
+				has_variable = EC_has_pc_zulu
+			}
+			remove_variable = EC_has_pc_zulu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:kavango_bantu }
+				has_variable = EC_has_pc_kavango_bantu
+			}
+			remove_variable = EC_has_pc_kavango_bantu
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:anglo_canadian }
+				has_variable = EC_has_pc_anglo_canadian
+			}
+			remove_variable = EC_has_pc_anglo_canadian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:franco_canadian }
+				has_variable = EC_has_pc_franco_canadian
+			}
+			remove_variable = EC_has_pc_franco_canadian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sorb }
+				has_variable = EC_has_pc_sorb
+			}
+			remove_variable = EC_has_pc_sorb
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:tuvan }
+				has_variable = EC_has_pc_tuvan
+			}
+			remove_variable = EC_has_pc_tuvan
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:corsican }
+				has_variable = EC_has_pc_corsican
+			}
+			remove_variable = EC_has_pc_corsican
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:yemenite }
+				has_variable = EC_has_pc_yemenite
+			}
+			remove_variable = EC_has_pc_yemenite
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:welsh }
+				has_variable = EC_has_pc_welsh
+			}
+			remove_variable = EC_has_pc_welsh
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:scottish }
+				has_variable = EC_has_pc_scottish
+			}
+			remove_variable = EC_has_pc_scottish
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:galician }
+				has_variable = EC_has_pc_galician
+			}
+			remove_variable = EC_has_pc_galician
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:malay }
+				has_variable = EC_has_pc_malay
+			}
+			remove_variable = EC_has_pc_malay
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:bornean }
+				has_variable = EC_has_pc_bornean
+			}
+			remove_variable = EC_has_pc_bornean
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:sumatran }
+				has_variable = EC_has_pc_sumatran
+			}
+			remove_variable = EC_has_pc_sumatran
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:balinese }
+				has_variable = EC_has_pc_balinese
+			}
+			remove_variable = EC_has_pc_balinese
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:cajun }
+				has_variable = EC_has_pc_cajun
+			}
+			remove_variable = EC_has_pc_cajun
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:assyrian }
+				has_variable = EC_has_pc_assyrian
+			}
+			remove_variable = EC_has_pc_assyrian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:circassian }
+				has_variable = EC_has_pc_circassian
+			}
+			remove_variable = EC_has_pc_circassian
+		}
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } NOT = { country_has_primary_culture = cu:francoprovencal }
+				has_variable = EC_has_pc_francoprovencal
+			}
+			remove_variable = EC_has_pc_francoprovencal
+		}
+		
+		# 1.7 cultures
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:chechen }
+				has_variable = EC_has_pc_chechen
+			}
+			remove_variable = EC_has_pc_chechen
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:karelian }
+				has_variable = EC_has_pc_karelian
+			}
+			remove_variable = EC_has_pc_karelian
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:bashkir }
+				has_variable = EC_has_pc_bashkir
+			}
+			remove_variable = EC_has_pc_bashkir
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:buryat }
+				has_variable = EC_has_pc_buryat
+			}
+			remove_variable = EC_has_pc_buryat
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:mordvin }
+				has_variable = EC_has_pc_mordvin
+			}
+			remove_variable = EC_has_pc_mordvin
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:chuvash }
+				has_variable = EC_has_pc_chuvash
+			}
+			remove_variable = EC_has_pc_chuvash
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:mari }
+				has_variable = EC_has_pc_mari
+			}
+			remove_variable = EC_has_pc_mari
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:udmurt }
+				has_variable = EC_has_pc_udmurt
+			}
+			remove_variable = EC_has_pc_udmurt
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:mazanderani }
+				has_variable = EC_has_pc_mazanderani
+			}
+			remove_variable = EC_has_pc_mazanderani
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:luri }
+				has_variable = EC_has_pc_luri
+			}
+			remove_variable = EC_has_pc_luri
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:kho }
+				has_variable = EC_has_pc_kho
+			}
+			remove_variable = EC_has_pc_kho
+		}
+		
+		# 1.8 cultures
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:hindustani }
+				has_variable = EC_has_pc_hindustani
+			}
+			remove_variable = EC_has_pc_hindustani
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:lushai }
+				has_variable = EC_has_pc_lushai
+			}
+			remove_variable = EC_has_pc_lushai
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:bundeli }
+				has_variable = EC_has_pc_bundeli
+			}
+			remove_variable = EC_has_pc_bundeli
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:pahari }
+				has_variable = EC_has_pc_pahari
+			}
+			remove_variable = EC_has_pc_pahari
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:gondi }
+				has_variable = EC_has_pc_gondi
+			}
+			remove_variable = EC_has_pc_gondi
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:bageli }
+				has_variable = EC_has_pc_bageli
+			}
+			remove_variable = EC_has_pc_bageli
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:chhattisgarhi }
+				has_variable = EC_has_pc_chhattisgarhi
+			}
+			remove_variable = EC_has_pc_chhattisgarhi
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:naga }
+				has_variable = EC_has_pc_naga
+			}
+			remove_variable = EC_has_pc_naga
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:deccani }
+				has_variable = EC_has_pc_deccani
+			}
+			remove_variable = EC_has_pc_deccani
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_country_type = decentralized } 
+				NOT = { country_has_primary_culture = cu:pathan }
+				has_variable = EC_has_pc_pathan
+			}
+			remove_variable = EC_has_pc_pathan
+		}
+	}
+	
+	
+	}
+}

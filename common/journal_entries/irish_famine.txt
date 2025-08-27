@@ -1,0 +1,110 @@
+﻿je_irish_famine = {
+	icon = gfx/interface/icons/event_icons/event_skull.dds
+	group = je_group_internal_affairs
+	should_be_pinned_by_default = yes
+
+	scripted_button = irish_famine_subsidize_grain_shipments
+	scripted_button = irish_famine_enforce_workhouse_reqs
+	scripted_button = irish_famine_promote_malthus
+	# is_shown_when_inactive = {
+	# 	any_scope_state = {
+	# 		has_modifier = blight_catastrophic
+	# 	}
+	# }
+	# possible = {
+	# 	exists = c:GBR
+	# 	c:GBR = ROOT
+	# 	any_scope_state = {
+	# 		has_modifier = blight_catastrophic
+	# 	}
+	# }
+	# timeout = 730 #2 years and a bit
+	immediate = {
+		root = {
+			set_variable = {
+				name = irish_famine_var
+				value = 4
+			}
+		}
+	}
+	complete = {
+		s:STATE_MUNSTER = {
+			NOT = {
+				any_scope_state = {
+					has_famine = yes
+				}
+				has_harvest_condition = h40_potato_blight_catastrophic
+			}
+		}
+		s:STATE_LEINSTER = {
+			NOT = {
+				any_scope_state = {
+					has_famine = yes
+				}
+				has_harvest_condition = h40_potato_blight_catastrophic
+			}
+		}
+		s:STATE_CONNAUGHT = {
+			NOT = {
+				any_scope_state = {
+					has_famine = yes
+				}
+				has_harvest_condition = h40_potato_blight_catastrophic
+			}
+		}
+		s:STATE_ULSTER = {
+			NOT = {
+				any_scope_state = {
+					has_famine = yes
+				}
+				has_harvest_condition = h40_potato_blight_catastrophic
+			}
+		}
+	}
+	on_complete = {
+		every_scope_state = {
+			limit = {
+				state_is_in_ireland = yes
+			}
+			add_modifier = {
+				name = irish_famine_legacy
+				multiplier = root.var:irish_famine_var
+				years = 30
+				is_decaying = yes
+			}
+		}
+	}
+	invalid = {
+		NOT = {
+			owns_entire_state_region = STATE_LEINSTER
+			owns_entire_state_region = STATE_MUNSTER
+			owns_entire_state_region = STATE_ULSTER
+			owns_entire_state_region = STATE_CONNAUGHT
+		}
+	}
+	on_invalid = {
+		every_state = {
+			limit = {
+				state_is_in_ireland = yes
+			}
+			add_modifier = {
+				name = irish_famine_legacy
+				multiplier = root.var:irish_famine_var
+				years = 30
+				is_decaying = yes
+			}
+		}
+	}
+	modifiers_while_active = {
+		emergency_measures_modifier
+	}
+	on_monthly_pulse = {
+		random_events = {
+			chance_of_no_event = 60
+			400 = blight.5 #irish exodus
+			400 = blight.6 #irish demand food exports stop
+			400 = blight.7 #charity donations
+			100 = blight.8 #Souperism
+		}
+	}
+}

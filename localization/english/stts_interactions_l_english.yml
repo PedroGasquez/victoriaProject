@@ -1,0 +1,11 @@
+﻿l_english:
+
+stts_press_tour: "Press Tour"
+stts_press_tour_info: "Favorable press coverage will temporarily boost the [concept_popularity] of [Character.GetFullName]."
+stts_smear_campaign: "Smear Campaign"
+stts_smear_campaign_info: "Spreading rumors and allegations against [Character.GetFullName] will temporarily reduce their [concept_popularity]."
+stts_no_current_press_tour: "Is not already the focus of a press campaign"
+stts_found_movement: "Found Movement"
+stts_found_movement_info: "[Character.GetFullName] will create a [concept_political_movement] based on their [concept_ideology]."
+stts_spread_social_idea: "Spread Ideas"
+stts_spread_social_idea_info: "[Character.GetFullName] will spread knowledge of a Society [concept_technology] key to their [concept_ideology]."

@@ -1,0 +1,678 @@
+﻿naval_conference_button = {
+	name = "naval_conference_button"
+	desc = "naval_conference_button_desc"
+	visible = {
+		NOT = { has_global_variable = naval_conference_started }
+	}
+	possible = {
+        custom_tooltip = {
+            text = is_main_naval_power_tooltip
+            is_target_in_global_variable_list = {
+                name = main_naval_powers
+                target = THIS
+            }
+        }
+		custom_tooltip = {
+            text = naval_conference_trigger_tt
+            NOT = {
+                any_country = {
+                    AND = {
+                        is_target_in_global_variable_list = {
+                            name = main_naval_powers
+                            target = THIS
+                        }
+                        is_at_war = yes
+                    }
+                }
+            }    
+        }
+	}
+	effect = {
+		set_global_variable = naval_conference_started
+        set_variable = is_naval_conference_host
+        every_in_global_list = {
+            variable = main_naval_powers
+            add_to_global_variable_list = {
+                name = naval_treaty_countries
+                target = this
+            }
+        }
+        set_global_variable = {
+            name = naval_conference_state_region
+            value = capital.state_region
+        }
+        set_global_variable = {
+            name = naval_conference_host
+            value = ROOT
+        }
+        save_scope_as = naval_conference_host
+        hidden_effect = {
+            trigger_event = {
+                id = navalconference.1
+                popup = yes
+            }
+        }
+        ordered_in_global_list = {
+            variable = main_naval_powers
+            order_by = global_country_ranking
+            position = 6
+            root = {
+                set_variable = {
+                    name = treaty_country_1
+                    value = prev
+                }
+            }
+        }
+        ordered_in_global_list = {
+            variable = main_naval_powers
+            order_by = global_country_ranking
+            position = 5
+            root = {
+                set_variable = {
+                    name = treaty_country_2
+                    value = prev
+                }
+            }
+        }
+        ordered_in_global_list = {
+            variable = main_naval_powers
+            order_by = global_country_ranking
+            position = 4
+            root = {
+                set_variable = {
+                    name = treaty_country_3
+                    value = prev
+                }
+            }
+        }
+        ordered_in_global_list = {
+            variable = main_naval_powers
+            order_by = global_country_ranking
+            position = 3
+            root = {
+                set_variable = {
+                    name = treaty_country_4
+                    value = prev
+                }
+            }
+        }
+        ordered_in_global_list = {
+            variable = main_naval_powers
+            order_by = global_country_ranking
+            position = 2
+            root = {
+                set_variable = {
+                    name = treaty_country_5
+                    value = prev
+                }
+            }
+        }
+        ordered_in_global_list = {
+            variable = main_naval_powers
+            order_by = global_country_ranking
+            position = 1
+            root = {
+                set_variable = {
+                    name = treaty_country_6
+                    value = prev
+                }
+            }
+        }
+        ordered_in_global_list = {
+            variable = main_naval_powers
+            order_by = global_country_ranking
+            position = 0
+            root = {
+                set_variable = {
+                    name = treaty_country_7
+                    value = prev
+                }
+            }
+        }
+        custom_tooltip = naval_conference_decision_tt
+	}
+	ai_chance = {
+		value = 0
+		if = { # AI will only do it if the player is not a GP
+			limit = {
+				NOT = {
+					any_country = {
+						is_ai = no
+						country_rank = rank_value:great_power
+					}
+				}
+			}
+			add = 10
+		}
+	}
+}
+
+leave_two_power_standard_button = {
+    name = "leave_two_power_standard_button"
+    desc = "leave_two_power_standard_button_desc"
+
+    visible = {
+        NOT = {
+            has_variable = abandoned_two_power_standard
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            text = leave_two_power_standard_button_tooltip
+            NOT = {
+                has_variable = two_power_standard_countdown
+            }
+        }
+    }
+    
+    effect = {        
+        hidden_effect = {
+            set_variable = abandoned_two_power_standard
+            ig:ig_armed_forces = {
+                remove_modifier = meeting_two_power_standard
+                remove_modifier = not_meeting_two_power_standard
+            }
+            set_strategy = ai_strategy_maintain_power_balance
+        }
+        ig:ig_armed_forces = {
+            add_modifier = {
+                name = abandoned_two_power_standard
+                years = 5
+            }
+        }
+    }
+
+    ai_chance = {        
+        value = 1
+
+        if = {
+            limit = {
+                var:two_power_standard_met = yes
+            }
+            add = -100
+        }
+
+        if = {
+            limit = {
+                taking_loans = yes
+            }
+            add = 1
+        }
+
+        if = {
+            limit = {
+                ig:ig_armed_forces = {
+                    is_powerful = yes
+                }
+            }
+            add = -1
+        }
+
+        if = {
+            limit = {
+                global_country_ranking >= 3
+            }
+            add = 5
+        }
+    }
+}
+
+vote_yes_on_treaty_button = {
+    name = vote_yes_on_treaty_button
+    desc = vote_yes_on_treaty_button_desc
+
+    visible = {
+        NOT = {
+            has_variable = is_voting_on_treaty
+        }
+    }
+    possible = {
+        always = yes
+    }
+    effect = {
+        trigger_event = {
+            id = navalconference.8
+            popup = yes
+        }
+    }
+
+    ai_chance = {
+        value = 0
+
+        if = {
+            limit = {
+                country_rank < rank_value:great_power # majors and below
+            }
+            add = 1
+        }
+
+        if = {
+            limit = {
+                any_interest_group = {
+                    leader = {
+                        has_ideology = ideology:ideology_pacifist
+                    }
+                    is_powerful = yes
+                }
+            }
+            add = 1
+        }
+
+        if = {
+            limit = {
+                scaled_debt >= 0.5 # The country is over halfway to its debt limit
+            }
+            add = 1
+        }
+
+        if = {
+            limit = {
+                ig:ig_armed_forces = {
+                    is_powerful = yes
+                }
+            }
+            add = -1
+        }
+
+        if = {
+            limit = {
+                ig:ig_rural_folk = {
+                    is_powerful = yes
+                }
+            }
+            add = 1
+        }
+
+        if = {
+            limit = {
+                ruler = {
+                    has_ideology = ideology:ideology_pacifist
+                }
+            }
+            add = 1
+        }
+
+        if = {
+            limit = {
+                ruler = {
+                    has_ideology = ideology:ideology_jingoist_leader
+                }
+            }
+            add = -1
+        }
+    }
+}
+
+convince_treaty_country_1_button = {
+    name = convince_treaty_country_1_button
+    desc = convince_treaty_country_1_button_desc
+    visible = {
+        has_global_variable = naval_conference_started
+        var:treaty_country_1 = {
+            NOR = {
+                has_variable = is_naval_conference_host
+                has_variable = is_voting_on_treaty
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            text = convince_treaty_cooldown_tooltip
+            NOT = {
+                has_variable = convince_treaty_cooldown
+            }
+        }
+    }
+    effect = {
+        set_variable = {
+            name = convince_treaty_cooldown
+            months = 2
+        }
+        var:treaty_country_1 = {
+            save_scope_as = persuaded_country
+        }
+        trigger_event = {
+            id = navalconference.9
+            popup = yes
+        }
+    }
+}
+
+convince_treaty_country_2_button = {
+    name = convince_treaty_country_2_button
+    desc = convince_treaty_country_2_button_desc
+    visible = {
+        has_global_variable = naval_conference_started
+        var:treaty_country_2 = {
+            NOR = {
+                has_variable = is_naval_conference_host
+                has_variable = is_voting_on_treaty
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            text = convince_treaty_cooldown_tooltip
+            NOT = {
+                has_variable = convince_treaty_cooldown
+            }
+        }
+    }
+    effect = {
+        set_variable = {
+            name = convince_treaty_cooldown
+            months = 2
+        }
+        var:treaty_country_2 = {
+            save_scope_as = persuaded_country
+        }
+        trigger_event = {
+            id = navalconference.9
+            popup = yes
+        }
+    }
+}
+
+convince_treaty_country_3_button = {
+    name = convince_treaty_country_3_button
+    desc = convince_treaty_country_3_button_desc
+    visible = {
+        has_global_variable = naval_conference_started
+        var:treaty_country_3 = {
+            NOR = {
+                has_variable = is_naval_conference_host
+                has_variable = is_voting_on_treaty
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            text = convince_treaty_cooldown_tooltip
+            NOT = {
+                has_variable = convince_treaty_cooldown
+            }
+        }
+    }
+    effect = {
+        set_variable = {
+            name = convince_treaty_cooldown
+            months = 2
+        }
+        var:treaty_country_3 = {
+            save_scope_as = persuaded_country
+        }
+        trigger_event = {
+            id = navalconference.9
+            popup = yes
+        }
+    }
+}
+
+convince_treaty_country_4_button = {
+    name = convince_treaty_country_4_button
+    desc = convince_treaty_country_4_button_desc
+    visible = {
+        has_global_variable = naval_conference_started
+        var:treaty_country_4 = {
+            NOR = {
+                has_variable = is_naval_conference_host
+                has_variable = is_voting_on_treaty
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            text = convince_treaty_cooldown_tooltip
+            NOT = {
+                has_variable = convince_treaty_cooldown
+            }
+        }
+    }
+    effect = {
+        set_variable = {
+            name = convince_treaty_cooldown
+            months = 2
+        }
+        var:treaty_country_4 = {
+            save_scope_as = persuaded_country
+        }
+        trigger_event = {
+            id = navalconference.9
+            popup = yes
+        }
+    }
+}
+
+convince_treaty_country_5_button = {
+    name = convince_treaty_country_5_button
+    desc = convince_treaty_country_5_button_desc
+    visible = {
+        has_global_variable = naval_conference_started
+        var:treaty_country_5 = {
+            NOR = {
+                has_variable = is_naval_conference_host
+                has_variable = is_voting_on_treaty
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            text = convince_treaty_cooldown_tooltip
+            NOT = {
+                has_variable = convince_treaty_cooldown
+            }
+        }
+    }
+    effect = {
+        set_variable = {
+            name = convince_treaty_cooldown
+            months = 2
+        }
+        var:treaty_country_5 = {
+            save_scope_as = persuaded_country
+        }
+        trigger_event = {
+            id = navalconference.9
+            popup = yes
+        }
+    }
+}
+
+convince_treaty_country_6_button = {
+    name = convince_treaty_country_6_button
+    desc = convince_treaty_country_6_button_desc
+    visible = {
+        has_global_variable = naval_conference_started
+        var:treaty_country_6 = {
+            NOR = {
+                has_variable = is_naval_conference_host
+                has_variable = is_voting_on_treaty
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            text = convince_treaty_cooldown_tooltip
+            NOT = {
+                has_variable = convince_treaty_cooldown
+            }
+        }
+    }
+    effect = {
+        set_variable = {
+            name = convince_treaty_cooldown
+            months = 2
+        }
+        var:treaty_country_6 = {
+            save_scope_as = persuaded_country
+        }
+        trigger_event = {
+            id = navalconference.9
+            popup = yes
+        }
+    }
+}
+
+convince_treaty_country_7_button = {
+    name = convince_treaty_country_7_button
+    desc = convince_treaty_country_7_button_desc
+    visible = {
+        has_global_variable = naval_conference_started
+        var:treaty_country_7 = {
+            NOR = {
+                has_variable = is_naval_conference_host
+                has_variable = is_voting_on_treaty
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            text = convince_treaty_cooldown_tooltip
+            NOT = {
+                has_variable = convince_treaty_cooldown
+            }
+        }
+    }
+    effect = {
+        set_variable = {
+            name = convince_treaty_cooldown
+            months = 2
+        }
+        var:treaty_country_7 = {
+            save_scope_as = persuaded_country
+        }
+        trigger_event = {
+            id = navalconference.9
+            popup = yes
+        }
+    }
+}
+
+predreadnought_tech_button = {
+    name = pre_dreadnoughts_decision
+    desc = pre_dreadnoughts_decision_desc
+
+    visible = {
+        NOT = {
+            has_modifier = developing_predreadnoughts
+        }
+    }
+
+    possible = {
+        predreadnought_trigger = yes
+    }
+
+    effect = {
+        add_modifier = {
+			name = developing_predreadnoughts
+			days = 280
+		}
+        set_variable = {
+			name = predreadnought_progress_var
+			value = 0 # It takes 40 weeks, or 280 days
+			# Total cost of 40*40k = 1.6 million
+		}
+		set_variable = {
+			name = naval_innovations
+			value = 0
+		}
+        hidden_effect = {
+            trigger_event = {
+                id = tts_tech_events.3 # open hearth steel making advantages, adds 5 innovation
+                days = 140
+            }
+        }
+    }
+}
+
+dreadnought_tech_button = {
+    name = dreadnoughts_decision
+    desc = dreadnoughts_decision_desc
+
+    visible = {
+        NOT = {
+            has_modifier = developing_dreadnoughts
+        }
+    }
+
+    possible = {
+        dreadnought_trigger = yes
+    }
+
+    effect = {
+        set_variable = taken_dreadnoughts_decision
+		add_modifier = {
+			name = developing_dreadnoughts
+			days = 280
+		}
+
+        set_variable = {
+			name = dreadnought_progress_var
+			value = 0 # It takes 40 weeks, or 280 days
+			# Total cost = 40*60k = 2.4 million
+		}		
+		set_variable = {
+			name = naval_innovations
+			value = 0
+		}
+
+        hidden_effect = {            
+            trigger_event = { # Innovative admiral suggests improvements, adds 3 innovation
+                days = 60
+                id = tts_tech_events.1
+            }
+            trigger_event = { # Civilian shipyards , adds 5 innovation
+                days = 120
+                id = tts_tech_events.7
+            }
+        }
+    }
+}
+
+battleship_tech_button = {
+    name = battleships_decision
+    desc = battleships_decision_desc
+
+	visible = {
+		NOT = {
+			has_modifier = developing_battleships
+		}
+	}
+
+	possible = { 
+		battleship_trigger = yes
+	}
+
+	effect = { 
+		set_variable = taken_battleships_decision
+		add_journal_entry = {
+			type = je_battleship_tech
+		}
+		add_modifier = {
+			name = developing_battleships
+			days = 280
+		}
+
+        set_variable = {
+			name = battleship_progress_var
+			value = 0 # It takes 40 weeks, or 280 days
+			# Total cost = 40*60k = 2.4 million
+		}
+		set_variable = {
+			name = naval_innovations
+			value = 0
+		}
+
+        hidden_effect = {
+            trigger_event = { # large scale steel production, adds 3 innovation
+                id = tts_tech_events.9
+                days = 120
+            }
+            trigger_event = { # civilian shipyards, adds 5 innovation
+                id = tts_tech_events.8
+                days = 180
+            }            
+        }
+	}
+}

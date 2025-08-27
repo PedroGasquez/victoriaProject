@@ -1,0 +1,58 @@
+GLOBAL = {
+
+	#Laws
+	
+	c:ALK ?= {
+		activate_law = law_type:law_frontier_colonization
+	}
+	
+	c:DEN ?= {
+		activate_law = law_type:law_agrarianism
+	}
+	
+	c:NET ?= {
+		activate_law = law_type:law_commercialized_agriculture
+	}
+	
+	c:NSW ?= {
+		activate_law = law_type:law_agrarianism
+	}
+	
+	c:SAS ?= {
+		activate_law = law_type:law_agrarianism
+	}
+	
+	c:TAS ?= {
+		activate_law = law_type:law_agrarianism
+	}
+	
+	c:WAS ?= {
+		activate_law = law_type:law_agrarianism
+	}
+
+	#Obsessions
+	
+	cu:brazilian = {
+		add_cultural_obsession = coffee
+	}
+	
+	cu:amhara = {
+		add_cultural_obsession = coffee
+	}
+	
+	cu:oromo = {
+		add_cultural_obsession = coffee
+	}
+	
+	cu:sidama = {
+		add_cultural_obsession = coffee
+	}
+	
+	cu:yankee = {
+		add_cultural_obsession = small_arms
+	}
+	
+	cu:dixie = {
+		add_cultural_obsession = small_arms
+	}
+}

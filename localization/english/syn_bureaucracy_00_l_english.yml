@@ -1,0 +1,45 @@
+﻿l_english:
+ laws_synergize_bureaucracy:0 "Synergize Bureaucracies"
+ laws_synergize_bureaucracy_action_name:0 "$laws_synergize_bureaucracy$"
+ laws_synergize_bureaucracy_action_propose_name:0 "Begin Synergizing Bureaucracies"
+ laws_synergize_bureaucracy_action_break_name:0 "Stop Synergizing Bureaucracies"
+ laws_synergize_bureaucracy_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] restructures the bureaucracy of [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] to synergize with theirs.\n Currently #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_bureaucracy_progress').GetValue]#! progress out of 8 stages."
+ laws_synergize_bureaucracy_desc:1 "#header $laws_synergize_bureaucracy$#!\n$TOOLTIP_DELIMITER$\nSynergizes the bureaucracy laws of the specified country."
+ laws_synergize_bureaucracy_action_notification_name:1 "[INITIATOR_COUNTRY.GetName] Synergizing Bureaucracies"
+ laws_synergize_bureaucracy_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName] is synergizing our country’s bureaucracy laws."
+ laws_synergize_bureaucracy_action_notification_break_name:1 "Cease Synergizing Bureaucracies by [INITIATOR_COUNTRY.GetName]"
+ laws_synergize_bureaucracy_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName] has ceased trying to synergizing our country's bureaucracy laws."
+ 
+ laws_synergize_bureaucracy_effect_desc_global:0 "Begin Synergizing Bureaucracies"
+ laws_synergize_bureaucracy_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] initiates bureaucratic synergisation with [TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_effect_desc_third:0 "[COUNTRY.GetName] initiates bureaucratic synergisation with [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ laws_synergize_bureaucracy_trigger_desc_global:0 "Bureaucratic Synergisation Ongoing"
+ laws_synergize_bureaucracy_trigger_false_desc_global:0 "Not currently in the process of  synergizing bureaucracy laws."
+ laws_synergize_bureaucracy_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] has synergetic bureaucratic systems with [TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] does not currently have synergetic bureaucratic systems with [TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_trigger_desc_third:0 "[COUNTRY.GetName] has synergetic bureaucratic systems with [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ laws_synergize_bureaucracy_trigger_false_desc_third:0 "[COUNTRY.GetName] does not currently have synergetic bureaucratic systems with [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ mog_syn_events.01.t: "Bureaucratic Synergy!"
+ mog_syn_events.01.d: "The proud nation of [ROOT.GetCountry.GetName] has successfully completed the synergization of bureaucracy laws with [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] will thrive in eternal prosperity through increased cohesion with the homeland."
+ mog_syn_events.01.f: ""Long live [ROOT.GetCountry.GetName]!""
+ mog_syn_events.01.a: "Well done."
+ 
+ laws_synergize_bureaucracy_weekly_effect: "Changes the [GetLawGroup('lawgroup_bureaucracy').GetName] [concept_law] of a [concept_subject] to match our own. Has a 20% chance to make progress each week, with 8 progress points required to succeed."
+ 
+ overlord_syn_cost_bureau: "Cost for Synergizing Bureaucracies"
+ BUREAUCRACY_SYNERGY_COST_BUREAU: "Cost for Synergizing Bureaucracies"
+ 
+ active_synergize_bureaucracy_tt: "Number of other $laws_synergize_bureaucracy$ actions is less than 1."
+
+MoG_SIS_synergy_complete_group: "SIS | Subject Synergization"
+notification_MoG_SIS_synergy_complete_name: "[SCOPE.sCountry('synergize_target_country').GetName] Synergized"
+notification_MoG_SIS_synergy_complete_desc: "[SCOPE.sCountry('synergize_target_country').GetName] has adopted [SCOPE.sLawType('initiator_law').GetName]."
+notification_MoG_SIS_synergy_complete_tooltip: "#header $notification_MoG_SIS_synergy_complete_name$#!\n$notification_MoG_SIS_synergy_complete_desc$"
+
+rule_sis_synergize_actions: "Synergize Subject Laws"
+setting_sis_synergize_enabled: "Enabled"
+setting_sis_synergize_enabled_desc: "The Player can alter the [GetLawGroup('lawgroup_bureaucracy').GetName], [GetLawGroup('lawgroup_economic_system').GetName], [GetLawGroup('lawgroup_land_reform').GetName] and [GetLawGroup('lawgroup_trade_policy').GetName]of their [Concept('concept_subject', '$concept_subjects$')] via [concept_overlord_action]."
+setting_sis_synergize_disabled: "Disabled"
+setting_sis_synergize_disabled_desc: "The Synergize [Concept('concept_overlord_action', '$concept_overlord_actions$')] are unvailable."

@@ -1,0 +1,13 @@
+﻿on_revolution_start = { on_actions = { ite_on_action } }
+on_secession_start = { on_actions = { ite_on_action } }
+on_country_released_as_own_subject = { on_actions = { ite_on_action } }
+on_country_released_as_overlord_subject = { on_actions = { ite_on_action } }
+on_country_released_as_independent = { on_actions = { ite_on_action } }
+
+ite_on_action = {
+	effect = {
+		scope:target ?= { 
+			ite_apply_traits = yes		
+		}
+	}
+}

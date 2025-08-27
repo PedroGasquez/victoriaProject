@@ -1,0 +1,296 @@
+﻿
+ai_strategy_maintain_two_power_standard = { # Mostly a modified colonial expansion
+	icon = "gfx/interface/icons/ai_strategy_icons/colonial_expansion.dds"
+
+	type = diplomatic
+
+	will_form_power_bloc = {
+		OR = {
+			global_country_ranking <= 3
+			AND = {
+				country_rank >= rank_value:great_power
+				has_technology_researched = nationalism
+			}
+		}
+	}
+
+	undesirable_infamy_level = {
+		value = 25
+
+		if = {
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
+			multiply = 1.5
+		}
+		else_if = {
+			limit = {
+				has_technology_researched = nationalism
+			}
+			multiply = 1.25
+		}
+	}
+
+	unacceptable_infamy_level = {
+		value = 50
+
+		if = {
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
+			multiply = 1.5
+		}
+		else_if = {
+			limit = {
+				has_technology_researched = nationalism
+			}
+			multiply = 1.25
+		}
+	}
+
+	ideological_opinion_effect_mult = {
+		value = 1.0
+	}
+
+	wargoal_maneuvers_fraction = {
+		value = 0
+
+		if = {
+			limit = {
+				scope:enemy_country = { is_country_type = unrecognized }
+			}
+			add = 0.25
+		}
+	}
+
+	diplomatic_play_neutrality = {
+		value = 25
+	}
+
+	diplomatic_play_boldness = {
+		value = -15
+	}
+
+	recklessness = {
+		value = 0.1
+	}
+
+	# Added to value from default strategy
+	aggression = {
+		value = 0.25
+		if = {
+			limit = {
+				NOT = { is_country_type = unrecognized }
+				scope:target_country = { is_country_type = unrecognized }
+				has_technology_researched = colonization
+				institution_investment_level = {
+					institution = institution_colonial_affairs
+					value >= 1
+				}
+			}
+			add = 0.25
+
+			if = {
+				limit = {
+					power_bloc ?= { has_principle = principle:principle_colonial_offices_3 }
+				}
+				add = 0.75
+			}
+
+			if = {
+				limit = { has_technology_researched = civilizing_mission }
+				add = 1.5
+
+				if = {
+					limit = { has_strategic_adjacency = scope:target_country }
+					add = 1
+				}
+
+				if = {
+					limit = { has_technology_researched = malaria_prevention }
+					add = 1
+				}
+
+				if = {
+					limit = {
+						has_journal_entry = je_scramble_for_africa
+						scope:target_country = {
+							country_is_in_africa = yes
+						}
+					}
+					add = 10
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_country = {
+						is_subject = yes
+						is_country_type = unrecognized
+						top_overlord ?= {
+							NOT = { is_country_type = unrecognized }
+						}
+					}
+				}
+				multiply = 0.0
+			}
+		}
+		if = {
+			limit = {
+				country_has_primary_culture = cu:british
+				has_technology_researched = malaria_prevention
+				any_subject_or_below = {
+					capital.region = sr:region_southern_africa
+				}
+				scope:target_country = {
+					capital.region = sr:region_southern_africa
+				}
+			}
+			add = 10
+		}
+
+		# Less aggressive against countries we're just antagonistic against, rather than belligerent/domineering
+		if = {
+			limit = {
+				has_attitude = {
+					who = scope:target_country
+					attitude = antagonistic
+				}
+			}
+			multiply = 0.1
+		}
+
+		# More aggressive against ideological enemies, a bit less aggressive against ideological allies
+		multiply = {
+			value = "ai_ideological_opinion(scope:target_country)"
+			multiply = -0.1
+			add = 1
+			max = 2.0
+			min = 0.5
+		}
+	}
+
+	building_group_weights = {
+		bg_navy = 2
+	}
+
+	colonial_interest_ratio = {
+		value = 0.10
+
+		if = {
+			limit = { navy_size >= 30 }
+			add = 0.1
+		}
+
+		if = {
+			limit = { navy_size >= 60 }
+			add = 0.1
+		}
+
+		if = {
+			limit = { navy_size >= 90 }
+			add = 0.1
+		}
+
+		if = {
+			limit = { navy_size >= 120 }
+			add = 0.1
+		}
+	}
+
+	secret_goal_scores = {
+		dominate = {
+			if = {
+				limit = {
+					scope:target_country = { NOT = { is_country_type = unrecognized } }
+				}
+				add = -100
+			}
+			if = {
+				limit = {
+					NOT = { scope:target_country = { is_subject_of = root } }
+					has_strategic_adjacency = scope:target_country
+					scope:target_country = { is_country_type = unrecognized }
+				}
+				add = 200
+
+				if = {
+					limit = {
+						has_journal_entry = je_scramble_for_africa
+						scope:target_country = {
+							country_is_in_africa = yes
+						}
+					}
+					add = 600
+				}
+			}
+			if = {
+				limit = {
+					country_has_primary_culture = cu:british
+					has_technology_researched = malaria_prevention
+					any_subject_or_below = {
+						capital.region = sr:region_southern_africa
+					}
+					scope:target_country = {
+						capital.region = sr:region_southern_africa
+					}
+				}
+				add = 400
+			}
+		}
+		conquer = {
+			if = {
+				limit = {
+					scope:target_country = { NOT = { is_country_type = unrecognized } }
+				}
+				add = -100
+			}
+			if = {
+				limit = {
+					NOT = { scope:target_country = { is_subject_of = root } }
+					has_strategic_adjacency = scope:target_country
+					scope:target_country = { is_country_type = unrecognized }
+				}
+				add = 200
+
+				if = {
+					limit = {
+						has_journal_entry = je_scramble_for_africa
+						scope:target_country = {
+							country_is_in_africa = yes
+						}
+					}
+					add = 600
+				}
+			}
+			if = {
+				limit = {
+					country_has_primary_culture = cu:british
+					has_technology_researched = malaria_prevention
+					any_subject_or_below = {
+						capital.region = sr:region_southern_africa
+					}
+					scope:target_country = {
+						capital.region = sr:region_southern_africa
+					}
+				}
+				add = 800
+			}
+		}
+	}
+
+	wargoal_weights = {
+		conquer_state = 1.5
+		reduce_autonomy = 1.5
+		take_treaty_port = 1.5
+		force_nationalization = 0.5
+	}
+
+	possible = {
+		has_journal_entry = je_two_power_standard
+	}
+
+	weight = {
+		value = 1000
+	}
+}

@@ -1,0 +1,4 @@
+﻿l_russian:
+
+ADD_WAR_WAR_SUPPORT: "[Country.GetAdjectiveNoFormatting]ая [Concept('concept_war_support', 'воинственность')] на войне «[War.GetName]» повышается на $VALUE|+$."
+ADD_WAR_WAR_SUPPORT_NEG: "[Country.GetAdjectiveNoFormatting]ая [Concept('concept_war_support', 'воинственность')] на войне «[War.GetName]» снижается на $VALUE|+$."

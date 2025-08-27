@@ -1,0 +1,5 @@
+﻿l_english:
+rbd_promulgated_law: "Rule By Decree"
+rbd_promulgate_law: "Promulgate Law"
+country_rbd_can_promulgate_laws_bool: "Can Promulgate Laws"
+country_rbd_can_promulgate_laws_bool_desc: "The 'Promulgate Law' Character Interaction will instantly pass a [concept_law] supported by our [concept_ruler]. It is available once a Law has reached Phase 2 of enactment."

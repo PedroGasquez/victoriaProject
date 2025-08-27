@@ -1,0 +1,61 @@
+﻿# Westernization style influence events
+
+l_german:
+    # Event options
+    WCR_ev_american_option: "Die amerikanischen Uniformen sehen ziemlich gut aus!"
+    WCR_ev_british_option:  "Die britischen Uniformen sind eher majestätisch!"
+    WCR_ev_french_option:   "Die französischen Uniformen wirken sehr schick!"
+    WCR_ev_german_option:   "Die deutschen Uniformen sind ausgesprochen beeindruckend!"
+    WCR_ev_russian_option:  "Die russischen Uniformen sind bemerkenswert imposant!"
+    WCR_ev_generic_option:  "Ein spezifischer Stil ist hierfür nicht notwendig."
+    WCR_ev_domestic_option: "Wir werden einen einzigartigen [GetPlayer.GetAdjectiveNoFormatting] Stil entwerfen!"
+    
+    # Tooltips
+    WCR_tt_when_in_cmd:    " wenn er das Kommando über Truppen erhält"
+    WCR_tt_when_in_cmd_df: "[AddLocalizationIf(Not(EqualTo_string(GetPlayer.GetActiveLawFromGroup('lawgroup_governance_principles').GetLawType.GetName, GetLawType('law_monarchy').GetName)), 'WCR_tt_when_in_cmd')]"
+    WCR_tt_domestic_ruler: "[GetPlayer.GetRuler.GetCustom('GetUniversalFullName')] wird die #v [GetPlayer.GetAdjectiveNoFormatting] Uniform#!$WCR_tt_when_in_cmd_df$ tragen."
+    WCR_tt_american_ruler: "[GetPlayer.GetRuler.GetCustom('GetUniversalFullName')] wird eine #v amerikanische Uniform#!$WCR_tt_when_in_cmd_df$ tragen."
+    WCR_tt_british_ruler:  "[GetPlayer.GetRuler.GetCustom('GetUniversalFullName')] wird eine #v britische Uniform#!$WCR_tt_when_in_cmd_df$ tragen."
+    WCR_tt_french_ruler:   "[GetPlayer.GetRuler.GetCustom('GetUniversalFullName')] wird eine #v französische Uniform#!$WCR_tt_when_in_cmd_df$ tragen."
+    WCR_tt_german_ruler:   "[GetPlayer.GetRuler.GetCustom('GetUniversalFullName')] wird eine #v deutsche Uniform#!$WCR_tt_when_in_cmd_df$ tragen."
+    WCR_tt_russian_ruler:  "[GetPlayer.GetRuler.GetCustom('GetUniversalFullName')] wird eine #v russische Uniform#!$WCR_tt_when_in_cmd_df$ tragen."
+    WCR_tt_generic_ruler:  "[GetPlayer.GetRuler.GetCustom('GetUniversalFullName')] wird eine #v generische europäische Uniform#!$WCR_tt_when_in_cmd_df$ tragen."
+    
+    WCR_tt_domestic_army: "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_barracks').GetName] und [Concept('concept_general', '$concept_generals$')] arbeiten, werden die #v [GetPlayer.GetAdjectiveNoFormatting] Uniform#! tragen."
+    WCR_tt_american_army: "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_barracks').GetName] und [Concept('concept_general', '$concept_generals$')] arbeiten, werden #v amerikanische Uniformen#! tragen."
+    WCR_tt_british_army:  "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_barracks').GetName] und [Concept('concept_general', '$concept_generals$')] arbeiten, werden #v britische Uniformen#! tragen."
+    WCR_tt_french_army:   "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_barracks').GetName] und [Concept('concept_general', '$concept_generals$')] arbeiten, werden #v französische Uniformen#! tragen."
+    WCR_tt_german_army:   "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_barracks').GetName] und [Concept('concept_general', '$concept_generals$')] arbeiten, werden #v deutsche Uniformen#! tragen."
+    WCR_tt_russian_army:  "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_barracks').GetName] und [Concept('concept_general', '$concept_generals$')] arbeiten, werden #v russische Uniformen#! tragen."
+    WCR_tt_generic_army:  "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_barracks').GetName] und [Concept('concept_general', '$concept_generals$')] arbeiten, werden #v generische europäische Uniformen#! tragen."
+    
+    WCR_tt_domestic_navy: "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_naval_base').GetName] und [Concept('concept_admiral', '$concept_admirals$')] arbeiten, werden die #v [GetPlayer.GetAdjectiveNoFormatting] Uniform#! tragen."
+    WCR_tt_american_navy: "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_naval_base').GetName] und [Concept('concept_admiral', '$concept_admirals$')] arbeiten, werden #v amerikanische Uniformen#! tragen."
+    WCR_tt_british_navy:  "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_naval_base').GetName] und [Concept('concept_admiral', '$concept_admirals$')] arbeiten, werden #v britische Uniformen#! tragen."
+    WCR_tt_french_navy:   "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_naval_base').GetName] und [Concept('concept_admiral', '$concept_admirals$')] arbeiten, werden #v französische Uniformen#! tragen."
+    WCR_tt_german_navy:   "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_naval_base').GetName] und [Concept('concept_admiral', '$concept_admirals$')] arbeiten, werden #v deutsche Uniformen#! tragen."
+    WCR_tt_russian_navy:  "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_naval_base').GetName] und [Concept('concept_admiral', '$concept_admirals$')] arbeiten, werden #v russische Uniformen#! tragen."
+    WCR_tt_generic_navy:  "[GetPopType('officers').GetName] & [GetPopType('soldiers').GetName] die in [GetBuildingType('building_naval_base').GetName] und [Concept('concept_admiral', '$concept_admirals$')] arbeiten, werden #v generische europäische Uniformen#! tragen."
+    
+    # Event text
+    WCR_sire:     "Euer Gnaden"
+    WCR_madam:    "Eure Majestät"
+    WCR_royal:    "Königlich"
+    WCR_exec:     "Exekutiv"
+    WCR_military: "militärisch"
+    
+    WCR_sire_madam:  "[AddLocalizationIf(GetPlayer.GetRuler.IsFemale, 'WCR_madam')][AddLocalizationIf(Not(GetPlayer.GetRuler.IsFemale), 'WCR_sire')]"
+    WCR_royal_exec:  "[AddLocalizationIf(Not(EqualTo_string(GetPlayer.GetActiveLawFromGroup('lawgroup_governance_principles').GetLawType.GetName, GetLawType('law_monarchy').GetName)), 'WCR_exec')][AddLocalizationIf(EqualTo_string(GetPlayer.GetActiveLawFromGroup('lawgroup_governance_principles').GetLawType.GetName, GetLawType('law_monarchy').GetName), 'WCR_royal')]"
+    WCR_military_df: "[AddLocalizationIf(Not(EqualTo_string(GetPlayer.GetActiveLawFromGroup('lawgroup_governance_principles').GetLawType.GetName, GetLawType('law_monarchy').GetName)), 'WCR_military')]"
+    
+    WCR_ev_2_title:  "Die neue $WCR_royal_exec$-Kleidung"
+    WCR_ev_2_desc:   "Um den Westernisierungsprozess zu beginnen, ist eine neue $WCR_military_df$ Uniform für [GetPlayer.GetRuler.GetCustom('GetUniversalTitle')][GetPlayer.GetRuler.GetCustom('GetUniversalFullName')] erforderlich."
+    WCR_ev_2_flavor: ""Die europäischen Mächte haben jeweils ihren eigenen einzigartigen Kleidungsstil. Welchen bevorzugen Sie, $WCR_sire_madam$?""
+    
+    WCR_ev_3_title:  "Uniformen des Heeres"
+    WCR_ev_3_desc:   "Auch die Armee benötigt neue Uniformen. Die Planung für den Erwerb und die Verteilung neuer Uniformen muss umgehend beginnen."
+    WCR_ev_3_flavor: ""Die Streitkräfte benötigen natürlich neue, moderne Uniformen, die zu Ihrer eigenen passen. Welchen Stil möchten Sie für die Armee wählen?""
+    
+    WCR_ev_4_title:  "Uniformen der Marine"
+    WCR_ev_4_desc:   "Maritime Macht ist ein Markenzeichen dieser Ära, und es wäre unhöflich, keine ansprechende Marine für das moderne Zeitalter zu haben."
+    WCR_ev_4_flavor: ""Alles, was wir brauchen, um mit unserem Westernisierungsprozess zu beginnen, ist Ihre Entscheidung über die Uniformen der Marine. Was soll es sein, $WCR_sire_madam$?""

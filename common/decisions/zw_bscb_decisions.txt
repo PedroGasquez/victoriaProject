@@ -1,0 +1,70 @@
+﻿#suez_canal_purchase
+zw_decision_pruchase_port_said_for_suez_canal = {
+	is_shown = {
+		is_player = yes
+		has_variable = suez_survey_complete
+		# port Said owner is not root
+		p:x8ED45E.owner != root
+		# port Suez owner is root
+		p:xC01060.owner = root
+		# port Said doesn't have Suez Canal
+		p:x8ED45E.state = {
+			NOT = { has_building = building_suez_canal }
+		}
+	}
+	possible = {
+		# trigger 1
+		OR = {
+			# port Suez has Suez Canal
+			p:xC01060.state = {
+				has_building = building_suez_canal
+			}
+			# port Suez is treaty port + port Said owner can't build Suez Canal
+			AND = {
+				owns_treaty_port_in = STATE_SINAI
+				p:x8ED45E.owner = {
+					NOT = {
+						custom_tooltip = {
+							text = suez_survey_complete_tooltip
+							has_variable = suez_survey_complete
+						}
+					}
+				}
+			}
+		}
+		# trigger 2
+		OR = {
+			# root rank is higher than port Said owner
+			country_rank > p:x8ED45E.owner.country_rank
+			# root prestige is much higher than port Said owner
+			prestige > {
+				add = p:x8ED45E.owner.prestige
+				multiply = 2
+			}
+		}
+	}
+	when_taken = {
+		# root pays port Said owner
+		add_modifier = {
+			name = suez_purchase
+			months = 60
+			multiplier = 0.1
+		}
+		# port Said owner gets paid from root
+		p:x8ED45E.owner = {
+			add_modifier = {
+				name = suez_sale
+				months = 60
+				multiplier = 0.1
+			}
+			post_notification = zw_noti_pruchase_port_said_for_suez_canal
+		}
+		# change port Said owner to root
+		s:STATE_SINAI = {
+			set_owner_of_provinces = {
+				country = root
+				provinces = { x8ED45E }
+			}
+		}
+	}
+}

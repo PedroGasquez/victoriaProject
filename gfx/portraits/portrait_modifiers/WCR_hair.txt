@@ -1,0 +1,112 @@
+﻿WCR_hairstyles = {
+    usage = game
+    selection_behavior = weighted_random
+    
+    # Purpose of this is to REMOVE the Japanese hairstyles when they westernize
+    WCR_westernized_japanese_hair_styles = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = east_asian_hairstyles
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                md_japanese_uniform_pack_active_trigger = no # JUP compatibility/deconflict
+                OR = {
+                    scope:pop ?= {
+                        culture = cu:japanese
+                    }
+                    scope:character ?= {
+                        culture = cu:japanese
+                    }
+                }
+                OR = {
+                    AND = {
+                        OR = {
+                            has_game_rule = WCR_modded_JAP_westernization
+                            has_game_rule = WCR_mixed_JAP_westernization
+                        }
+                        WCR_has_completed_westernization_trigger = yes
+                    }
+                    AND = {
+                        has_game_rule = WCR_vanilla_JAP_westernization
+                        OR = {
+                            scope:pop ?= {
+                                owner ?= {
+                                    WCR_is_japan_trigger = yes
+                                    has_variable = meiji_restoration_complete
+                                }
+                            }
+                            scope:character ?= {
+                                owner ?= {
+                                    WCR_is_japan_trigger = yes
+                                    has_variable = meiji_restoration_complete
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    # This one is for preserving unwesternized styles
+    WCR_japanese_hair_styles = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = japanese_hairstyles
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1
+                OR = {
+                    AND = {
+                        scope:pop ?= {
+                            culture = cu:japanese
+                        }
+                        poor_clothes_pop_trigger = no
+                    }
+                    scope:character ?= {
+                        culture = cu:japanese
+                    }
+                }
+                NOR = { # Copypasted from WCR_westernized_japanese_hair_styles and made it NOR
+                    AND = {
+                        OR = {
+                            has_game_rule = WCR_modded_JAP_westernization
+                            has_game_rule = WCR_mixed_JAP_westernization
+                        }
+                        WCR_has_completed_westernization_trigger = yes
+                    }
+                    AND = {
+                        has_game_rule = WCR_vanilla_JAP_westernization
+                        OR = {
+                            scope:pop ?= {
+                                owner ?= {
+                                    WCR_is_japan_trigger = yes
+                                    has_variable = meiji_restoration_complete
+                                }
+                            }
+                            scope:character ?= {
+                                owner ?= {
+                                    WCR_is_japan_trigger = yes
+                                    has_variable = meiji_restoration_complete
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

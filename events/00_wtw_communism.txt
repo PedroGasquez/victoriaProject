@@ -1,0 +1,71 @@
+﻿namespace = communism
+
+# Startup event 1
+communism.10 = {
+	type = country_event
+	placement = root
+	title = communism.10.t
+	desc = communism.10.d
+	flavor = communism.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		# triggered by communsim JE 1
+	}
+
+	#immediate = {
+	#	set_variable = { name = communism_je_1_var value = 25 }
+	#}
+
+	option = {
+		name = communism.10.a
+		default_option = yes
+		capital = {
+			add_radicals_in_state = {
+				value = medium_radicals
+				pop_type = laborers
+			}
+		}
+	}
+	option = {
+		name = communism.10.b
+		highlighted_option = yes
+		trigger = {
+			any_interest_group = {
+				OR = {
+					is_in_government = yes
+					is_powerful = yes
+				}
+				OR = {
+					has_ideology = ideology:ideology_socialist
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_communist
+							has_ideology = ideology:ideology_vanguardist
+							has_ideology = ideology:ideology_anarchist
+						}
+					}
+				}
+			}
+		}
+		capital = {
+			add_radicals_in_state = {
+				value = small_radicals
+				pop_type = laborers
+			}
+		}
+		custom_tooltip = {
+			text = communism_var_tick_2_tt
+			set_variable = { name = communism_progress_var_add value = 3 }
+		}
+	}
+}

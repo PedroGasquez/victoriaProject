@@ -1,0 +1,7 @@
+﻿anzfp_is_active = { # Australia & New Zealand Flavor Pack
+	always = no
+}
+
+is_usfp_active = { # Hail, Columbia!
+    always = no
+}

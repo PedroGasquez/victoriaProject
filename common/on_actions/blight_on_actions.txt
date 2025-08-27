@@ -1,0 +1,118 @@
+﻿on_monthly_pulse = {
+	on_actions = {
+		blight_on_action
+	}
+}
+
+blight_on_action = {
+	effect = {
+		if = {
+			limit = {
+				game_date > 1843.6.1
+				NOT = {
+					has_global_variable = potato_blight_spawned
+				}
+			}
+			set_global_variable = potato_blight_spawned
+			every_state_region = {
+				limit = {
+					blight_zone_usa_region = yes
+				}
+				start_harvest_condition = h40_potato_blight
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						is_country_type = decentralized
+					}
+					any_scope_state = {
+						blight_zone_usa = yes
+					}
+				}
+				trigger_event = blight.1
+			}
+			
+		}
+		#spawn 1845 blight in europe
+		if = {
+			limit = {
+				game_date > 1845.6.1
+				NOT = {
+					has_global_variable = potato_blight_1845
+				}
+			}
+			every_state_region = {
+				limit = {
+					OR= {
+						blight_zone_europe_regions = yes
+						blight_zone_catastrophic_regions = yes
+					}
+				}
+				start_harvest_condition = h40_potato_blight
+			}
+			set_global_variable = potato_blight_1845
+			every_country = {
+				limit = {
+					any_scope_state = {
+						blight_zone_europe = yes
+					}
+				}
+				trigger_event = blight.2
+			}
+		}
+		#spawn 1846 blight in europe
+		if = {
+			limit = {
+				game_date > 1846.5.1
+				NOT = {
+					has_global_variable = potato_blight_1846
+				}
+			}
+			every_state_region = {
+				limit = {
+					blight_zone_europe_regions = yes
+				}
+				start_harvest_condition = h40_potato_blight
+			}
+			every_state_region = {
+				limit = {
+					blight_zone_catastrophic_regions = yes
+				}
+				if = {
+					limit = { 
+						has_harvest_condition = h40_potato_blight
+					}
+					finish_harvest_condition = h40_potato_blight
+				}
+				start_harvest_condition = h40_potato_blight_catastrophic
+			}
+			set_global_variable = potato_blight_1846
+			every_country = {
+				limit = {
+					any_scope_state = {
+						blight_zone_europe = yes
+					}
+				}
+				trigger_event = blight.3
+			}
+		}
+		#spawn 1846 crop failure in europe
+		if = {
+			limit = {
+				game_date > 1846.6.1
+				NOT = {
+					has_global_variable = crop_failure_1846
+				}
+			}
+			set_global_variable = crop_failure_1846
+			every_country = {
+				limit = {
+					any_scope_state = {
+						state_is_in_europe = yes
+					}
+				}
+				trigger_event = blight.4
+			}
+		}
+	}
+}

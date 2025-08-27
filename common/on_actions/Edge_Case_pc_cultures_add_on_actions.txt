@@ -1,0 +1,1896 @@
+﻿on_country_formed = {
+	on_actions = {
+		EC_pc_culture_add_on_actions
+	}
+}
+
+EC_pc_culture_add_on_actions = {
+
+	effect = {
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_platinean
+			}
+			add_primary_culture = cu:platinean
+		}
+	
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_north_german
+			}
+			add_primary_culture = cu:north_german
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_south_german
+			}
+			add_primary_culture = cu:south_german
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ashkenazi
+			}
+			add_primary_culture = cu:ashkenazi
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_dutch
+			}
+			add_primary_culture = cu:dutch
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_flemish
+			}
+			add_primary_culture = cu:flemish
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_wallonian
+			}
+			add_primary_culture = cu:wallonian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_boer
+			}
+			add_primary_culture = cu:boer
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_alemannic
+			}
+			add_primary_culture = cu:alemannic
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_swedish
+			}
+			add_primary_culture = cu:swedish
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_danish
+			}
+			add_primary_culture = cu:danish
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_norwegian
+			}
+			add_primary_culture = cu:norwegian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_icelandic
+			}
+			add_primary_culture = cu:icelandic
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_finnish
+			}
+			add_primary_culture = cu:finnish
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sami
+			}
+			add_primary_culture = cu:sami
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_british
+			}
+			add_primary_culture = cu:british
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_irish
+			}
+			add_primary_culture = cu:irish
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_australian
+			}
+			add_primary_culture = cu:australian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_north_italian
+			}
+			add_primary_culture = cu:north_italian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_south_italian
+			}
+			add_primary_culture = cu:south_italian
+		} 
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_maltese
+			}
+			add_primary_culture = cu:maltese
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_basque
+			}
+			add_primary_culture = cu:basque
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_spanish
+			}
+			add_primary_culture = cu:spanish
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_catalan
+			}
+			add_primary_culture = cu:catalan
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_portuguese
+			}
+			add_primary_culture = cu:portuguese
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_french
+			}
+			add_primary_culture = cu:french
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_occitan
+			}
+			add_primary_culture = cu:occitan
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_breton
+			}
+			add_primary_culture = cu:breton
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_croat
+			}
+			add_primary_culture = cu:croat
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_serb
+			}
+			add_primary_culture = cu:serb
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bulgarian
+			}
+			add_primary_culture = cu:bulgarian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_albanian
+			}
+			add_primary_culture = cu:albanian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_slovene
+			}
+			add_primary_culture = cu:slovene
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bosniak
+			}
+			add_primary_culture = cu:bosniak
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_romanian
+			}
+			add_primary_culture = cu:romanian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_hungarian
+			}
+			add_primary_culture = cu:hungarian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_szekely
+			}
+			add_primary_culture = cu:szekely
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_polish
+			}
+			add_primary_culture = cu:polish
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_lithuanian
+			}
+			add_primary_culture = cu:lithuanian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_czech
+			}
+			add_primary_culture = cu:czech
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_slovak
+			}
+			add_primary_culture = cu:slovak
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_russian
+			}
+			add_primary_culture = cu:russian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_byelorussian
+			}
+			add_primary_culture = cu:byelorussian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ukrainian
+			}
+			add_primary_culture = cu:ukrainian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ugrian
+			}
+			add_primary_culture = cu:ugrian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_latvian
+			}
+			add_primary_culture = cu:latvian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_estonian
+			}
+			add_primary_culture = cu:estonian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_greek
+			}
+			add_primary_culture = cu:greek
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_georgian
+			}
+			add_primary_culture = cu:georgian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_armenian
+			}
+			add_primary_culture = cu:armenian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sephardic
+			}
+			add_primary_culture = cu:sephardic
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_turkish
+			}
+			add_primary_culture = cu:turkish
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_azerbaijani
+			}
+			add_primary_culture = cu:azerbaijani
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_north_caucasian
+			}
+			add_primary_culture = cu:north_caucasian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_maghrebi
+			}
+			add_primary_culture = cu:maghrebi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_misri
+			}
+			add_primary_culture = cu:misri
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mashriqi
+			}
+			add_primary_culture = cu:mashriqi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bedouin
+			}
+			add_primary_culture = cu:bedouin
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_berber
+			}
+			add_primary_culture = cu:berber
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_persian
+			}
+			add_primary_culture = cu:persian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_uzbek
+			}
+			add_primary_culture = cu:uzbek
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kazak
+			}
+			add_primary_culture = cu:kazak
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kirgiz
+			}
+			add_primary_culture = cu:kirgiz
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tajik
+			}
+			add_primary_culture = cu:tajik
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_uighur
+			}
+			add_primary_culture = cu:uighur
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_pashtun
+			}
+			add_primary_culture = cu:pashtun
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_baluchi
+			}
+			add_primary_culture = cu:baluchi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_hazara
+			}
+			add_primary_culture = cu:hazara
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_turkmen
+			}
+			add_primary_culture = cu:turkmen
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kurdish
+			}
+			add_primary_culture = cu:kurdish
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tatar
+			}
+			add_primary_culture = cu:tatar
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mongol
+			}
+			add_primary_culture = cu:mongol
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kalmyk
+			}
+			add_primary_culture = cu:kalmyk
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_siberian
+			}
+			add_primary_culture = cu:siberian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_yakut
+			}
+			add_primary_culture = cu:yakut
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tibetan
+			}
+			add_primary_culture = cu:tibetan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_assamese
+			}
+			add_primary_culture = cu:assamese
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bengali
+			}
+			add_primary_culture = cu:bengali
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bihari
+			}
+			add_primary_culture = cu:bihari
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_manipuri
+			}
+			add_primary_culture = cu:manipuri
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_nepali
+			}
+			add_primary_culture = cu:nepali
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_oriya
+			}
+			add_primary_culture = cu:oriya
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sinhala
+			}
+			add_primary_culture = cu:sinhala
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_avadhi
+			}
+			add_primary_culture = cu:avadhi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kanauji
+			}
+			add_primary_culture = cu:kanauji
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_panjabi
+			}
+			add_primary_culture = cu:panjabi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kashmiri
+			}
+			add_primary_culture = cu:kashmiri
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_gujarati
+			}
+			add_primary_culture = cu:gujarati
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_marathi
+			}
+			add_primary_culture = cu:marathi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sindi
+			}
+			add_primary_culture = cu:sindi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_rajput
+			}
+			add_primary_culture = cu:rajput
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kannada
+			}
+			add_primary_culture = cu:kannada
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_malayalam
+			}
+			add_primary_culture = cu:malayalam
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tamil
+			}
+			add_primary_culture = cu:tamil
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_telegu
+			}
+			add_primary_culture = cu:telegu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_vietnamese
+			}
+			add_primary_culture = cu:vietnamese
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_khmer
+			}
+			add_primary_culture = cu:khmer
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_batak
+			}
+			add_primary_culture = cu:batak
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_dayak
+			}
+			add_primary_culture = cu:dayak
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_malagasy
+			}
+			add_primary_culture = cu:malagasy
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_filipino
+			}
+			add_primary_culture = cu:filipino
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_moro
+			}
+			add_primary_culture = cu:moro
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_javan
+			}
+			add_primary_culture = cu:javan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_moluccan
+			}
+			add_primary_culture = cu:moluccan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_thai
+			}
+			add_primary_culture = cu:thai
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mon
+			}
+			add_primary_culture = cu:mon
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_khmu
+			}
+			add_primary_culture = cu:khmu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_lao
+			}
+			add_primary_culture = cu:lao
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_shan
+			}
+			add_primary_culture = cu:shan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_burmese
+			}
+			add_primary_culture = cu:burmese
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kachin
+			}
+			add_primary_culture = cu:kachin
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_karen
+			}
+			add_primary_culture = cu:karen
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_japanese
+			}
+			add_primary_culture = cu:japanese
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_manchu
+			}
+			add_primary_culture = cu:manchu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_han
+			}
+			add_primary_culture = cu:han
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_korean
+			}
+			add_primary_culture = cu:korean
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ainu
+			}
+			add_primary_culture = cu:ainu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_hakka
+			}
+			add_primary_culture = cu:hakka
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_miao
+			}
+			add_primary_culture = cu:miao
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_min
+			}
+			add_primary_culture = cu:min
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_zhuang
+			}
+			add_primary_culture = cu:zhuang
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_yi
+			}
+			add_primary_culture = cu:yi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_yue
+			}
+			add_primary_culture = cu:yue
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_polynesian
+			}
+			add_primary_culture = cu:polynesian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_hawaiian
+			}
+			add_primary_culture = cu:hawaiian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_melanesian
+			}
+			add_primary_culture = cu:melanesian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_micronesian
+			}
+			add_primary_culture = cu:micronesian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_maori
+			}
+			add_primary_culture = cu:maori
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_yuanzhumin
+			}
+			add_primary_culture = cu:yuanzhumin
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_aborigine
+			}
+			add_primary_culture = cu:aborigine
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_zapotec
+			}
+			add_primary_culture = cu:zapotec
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mayan
+			}
+			add_primary_culture = cu:mayan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_nahua
+			}
+			add_primary_culture = cu:nahua
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tarascan
+			}
+			add_primary_culture = cu:tarascan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_quechua
+			}
+			add_primary_culture = cu:quechua
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_guarani
+			}
+			add_primary_culture = cu:guarani
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_aimara
+			}
+			add_primary_culture = cu:aimara
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_amazonian
+			}
+			add_primary_culture = cu:amazonian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_patagonian
+			}
+			add_primary_culture = cu:patagonian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_guajiro
+			}
+			add_primary_culture = cu:guajiro
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tupinamba
+			}
+			add_primary_culture = cu:tupinamba
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_metis
+			}
+			add_primary_culture = cu:metis
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_dakota
+			}
+			add_primary_culture = cu:dakota
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_cherokee
+			}
+			add_primary_culture = cu:cherokee
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_muskogean
+			}
+			add_primary_culture = cu:muskogean
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_pueblo
+			}
+			add_primary_culture = cu:pueblo
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_inuit
+			}
+			add_primary_culture = cu:inuit
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_cree
+			}
+			add_primary_culture = cu:cree
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_navajo
+			}
+			add_primary_culture = cu:navajo
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_athabaskan
+			}
+			add_primary_culture = cu:athabaskan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_salish
+			}
+			add_primary_culture = cu:salish
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_nez_perce
+			}
+			add_primary_culture = cu:nez_perce
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_siouan
+			}
+			add_primary_culture = cu:siouan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_comanche
+			}
+			add_primary_culture = cu:comanche
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_algonquian
+			}
+			add_primary_culture = cu:algonquian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_iroquoian
+			}
+			add_primary_culture = cu:iroquoian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_caddoan
+			}
+			add_primary_culture = cu:caddoan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_paiute
+			}
+			add_primary_culture = cu:paiute
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_hokan
+			}
+			add_primary_culture = cu:hokan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_apache
+			}
+			add_primary_culture = cu:apache
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_oodham
+			}
+			add_primary_culture = cu:oodham
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mixtec
+			}
+			add_primary_culture = cu:mixtec
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_muisca
+			}
+			add_primary_culture = cu:muisca
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_miskito
+			}
+			add_primary_culture = cu:miskito
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_cariban
+			}
+			add_primary_culture = cu:cariban
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_yankee
+			}
+			add_primary_culture = cu:yankee
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_dixie
+			}
+			add_primary_culture = cu:dixie
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mexican
+			}
+			add_primary_culture = cu:mexican
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_central_american
+			}
+			add_primary_culture = cu:central_american
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_caribeno
+			}
+			add_primary_culture = cu:caribeno
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_north_andean
+			}
+			add_primary_culture = cu:north_andean
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_south_andean
+			}
+			add_primary_culture = cu:south_andean
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_peruvian
+			}
+			add_primary_culture = cu:peruvian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bolivian
+			}
+			add_primary_culture = cu:bolivian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ecuadorian
+			}
+			add_primary_culture = cu:ecuadorian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_chilean
+			}
+			add_primary_culture = cu:chilean
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_venezuelan
+			}
+			add_primary_culture = cu:venezuelan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_argentine
+			}
+			add_primary_culture = cu:argentine
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_uruguayan
+			}
+			add_primary_culture = cu:uruguayan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_paraguayan
+			}
+			add_primary_culture = cu:paraguayan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_colombian
+			}
+			add_primary_culture = cu:colombian
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_brazilian
+			}
+			add_primary_culture = cu:brazilian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sulista
+			}
+			add_primary_culture = cu:sulista
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_nordestino
+			}
+			add_primary_culture = cu:nordestino
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_amazonic
+			}
+			add_primary_culture = cu:amazonic
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_paulista
+			}
+			add_primary_culture = cu:paulista
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_afro_american
+			}
+			add_primary_culture = cu:afro_american
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_afro_caribbean
+			}
+			add_primary_culture = cu:afro_caribbean
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_afro_caribeno
+			}
+			add_primary_culture = cu:afro_caribeno
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_afro_brazilian
+			}
+			add_primary_culture = cu:afro_brazilian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_afro_antillean
+			}
+			add_primary_culture = cu:afro_antillean
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_akan
+			}
+			add_primary_culture = cu:akan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bambara
+			}
+			add_primary_culture = cu:bambara
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bassa
+			}
+			add_primary_culture = cu:bassa
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_dyula
+			}
+			add_primary_culture = cu:dyula
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_edo
+			}
+			add_primary_culture = cu:edo
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ewe
+			}
+			add_primary_culture = cu:ewe
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_fon
+			}
+			add_primary_culture = cu:fon
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_fulbe
+			}
+			add_primary_culture = cu:fulbe
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_haratin
+			}
+			add_primary_culture = cu:haratin
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_hausa
+			}
+			add_primary_culture = cu:hausa
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ibibio
+			}
+			add_primary_culture = cu:ibibio
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ibo
+			}
+			add_primary_culture = cu:ibo
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kissi
+			}
+			add_primary_culture = cu:kissi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kru
+			}
+			add_primary_culture = cu:kru
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mande
+			}
+			add_primary_culture = cu:mande
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bidan
+			}
+			add_primary_culture = cu:bidan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mossi
+			}
+			add_primary_culture = cu:mossi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_senufo
+			}
+			add_primary_culture = cu:senufo
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_songhai
+			}
+			add_primary_culture = cu:songhai
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tiv
+			}
+			add_primary_culture = cu:tiv
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tuareg
+			}
+			add_primary_culture = cu:tuareg
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_wolof
+			}
+			add_primary_culture = cu:wolof
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_yoruba
+			}
+			add_primary_culture = cu:yoruba
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bakongo
+			}
+			add_primary_culture = cu:bakongo
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_baguirmi
+			}
+			add_primary_culture = cu:baguirmi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_fang
+			}
+			add_primary_culture = cu:fang
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kanuri
+			}
+			add_primary_culture = cu:kanuri
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_luba
+			}
+			add_primary_culture = cu:luba
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_lunda
+			}
+			add_primary_culture = cu:lunda
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mongo
+			}
+			add_primary_culture = cu:mongo
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sara
+			}
+			add_primary_culture = cu:sara
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_teda
+			}
+			add_primary_culture = cu:teda
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_equatorial_bantu
+			}
+			add_primary_culture = cu:equatorial_bantu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_fluvian_bantu
+			}
+			add_primary_culture = cu:fluvian_bantu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_nilotic
+			}
+			add_primary_culture = cu:nilotic
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_amhara
+			}
+			add_primary_culture = cu:amhara
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_afar
+			}
+			add_primary_culture = cu:afar
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_azande
+			}
+			add_primary_culture = cu:azande
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_baganda
+			}
+			add_primary_culture = cu:baganda
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_beja
+			}
+			add_primary_culture = cu:beja
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_dinka
+			}
+			add_primary_culture = cu:dinka
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_fur
+			}
+			add_primary_culture = cu:fur
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kikuyu
+			}
+			add_primary_culture = cu:kikuyu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_luo
+			}
+			add_primary_culture = cu:luo
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_maasai
+			}
+			add_primary_culture = cu:maasai
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_nuer
+			}
+			add_primary_culture = cu:nuer
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_nuba
+			}
+			add_primary_culture = cu:nuba
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_oromo
+			}
+			add_primary_culture = cu:oromo
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ruanda
+			}
+			add_primary_culture = cu:ruanda
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_rundi
+			}
+			add_primary_culture = cu:rundi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sidama
+			}
+			add_primary_culture = cu:sidama
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_somali
+			}
+			add_primary_culture = cu:somali
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sudanese
+			}
+			add_primary_culture = cu:sudanese
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sukuma
+			}
+			add_primary_culture = cu:sukuma
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_swahili
+			}
+			add_primary_culture = cu:swahili
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tigray
+			}
+			add_primary_culture = cu:tigray
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_unyamwezi
+			}
+			add_primary_culture = cu:unyamwezi
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_lacustrine_bantu
+			}
+			add_primary_culture = cu:lacustrine_bantu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_chewa
+			}
+			add_primary_culture = cu:chewa
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_herero
+			}
+			add_primary_culture = cu:herero
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_khoisan
+			}
+			add_primary_culture = cu:khoisan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_lomwe
+			}
+			add_primary_culture = cu:lomwe
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_makua
+			}
+			add_primary_culture = cu:makua
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_nguni
+			}
+			add_primary_culture = cu:nguni
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_ovimbundu
+			}
+			add_primary_culture = cu:ovimbundu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sena
+			}
+			add_primary_culture = cu:sena
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_shona
+			}
+			add_primary_culture = cu:shona
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sotho
+			}
+			add_primary_culture = cu:sotho
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tonga
+			}
+			add_primary_culture = cu:tonga
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tswana
+			}
+			add_primary_culture = cu:tswana
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_xhosa
+			}
+			add_primary_culture = cu:xhosa
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_yao
+			}
+			add_primary_culture = cu:yao
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_zulu
+			}
+			add_primary_culture = cu:zulu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kavango_bantu
+			}
+			add_primary_culture = cu:kavango_bantu
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_anglo_canadian
+			}
+			add_primary_culture = cu:anglo_canadian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_franco_canadian
+			}
+			add_primary_culture = cu:franco_canadian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sorb
+			}
+			add_primary_culture = cu:sorb
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_tuvan
+			}
+			add_primary_culture = cu:tuvan
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_corsican
+			}
+			add_primary_culture = cu:corsican
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_yemenite
+			}
+			add_primary_culture = cu:yemenite
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_welsh
+			}
+			add_primary_culture = cu:welsh
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_scottish
+			}
+			add_primary_culture = cu:scottish
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_galician
+			}
+			add_primary_culture = cu:galician
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_malay
+			}
+			add_primary_culture = cu:malay
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bornean
+			}
+			add_primary_culture = cu:bornean
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_sumatran
+			}
+			add_primary_culture = cu:sumatran
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_balinese
+			}
+			add_primary_culture = cu:balinese
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_cajun
+			}
+			add_primary_culture = cu:cajun
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_assyrian
+			}
+			add_primary_culture = cu:assyrian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_circassian
+			}
+			add_primary_culture = cu:circassian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_francoprovencal
+			}
+			add_primary_culture = cu:francoprovencal
+		}
+		
+		# 1.7 cultures
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_chechen
+			}
+			add_primary_culture = cu:chechen
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_karelian
+			}
+			add_primary_culture = cu:karelian
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bashkir
+			}
+			add_primary_culture = cu:bashkir
+		}every_country = {
+			limit = {
+				has_variable = EC_has_pc_buryat
+			}
+			add_primary_culture = cu:buryat
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mordvin
+			}
+			add_primary_culture = cu:mordvin
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_chuvash
+			}
+			add_primary_culture = cu:chuvash
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mari
+			}
+			add_primary_culture = cu:mari
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_udmurt
+			}
+			add_primary_culture = cu:udmurt
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_mazanderani
+			}
+			add_primary_culture = cu:mazanderani
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_luri
+			}
+			add_primary_culture = cu:luri
+		}
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_kho
+			}
+			add_primary_culture = cu:kho
+		}
+		
+		# 1.8 cultures
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_hindustani
+			}
+			add_primary_culture = cu:hindustani
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_lushai
+			}
+			add_primary_culture = cu:lushai
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bundeli
+			}
+			add_primary_culture = cu:bundeli
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_pahari
+			}
+			add_primary_culture = cu:pahari
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_gondi
+			}
+			add_primary_culture = cu:gondi
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_bageli
+			}
+			add_primary_culture = cu:bageli
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_chhattisgarhi
+			}
+			add_primary_culture = cu:chhattisgarhi
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_naga
+			}
+			add_primary_culture = cu:naga
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_deccani
+			}
+			add_primary_culture = cu:deccani
+		}
+		
+		every_country = {
+			limit = {
+				has_variable = EC_has_pc_pathan
+			}
+			add_primary_culture = cu:pathan
+		}
+	}
+}

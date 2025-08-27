@@ -1,0 +1,19 @@
+corporate_charters = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/corporate_charters.dds"
+	category = society
+
+	modifier = {
+		country_max_companies_add = 1
+		country_free_charters_add = 2
+	}
+
+	unlocking_technologies = {
+		stock_exchange
+		currency_standards
+	}
+
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}

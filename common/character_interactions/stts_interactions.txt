@@ -1,0 +1,823 @@
+﻿stts_press_tour = {
+	icon = "gfx/interface/icons/generic_icons/ig_bolster.dds"
+	clicksound = "event:/SFX/UI/Global/promote"
+
+	potential = {
+		age >= define:NCharacters|ADULT_AGE
+		owner = {
+			exists = this
+			has_technology_researched = mass_communication
+		}
+	}
+
+	possible = {
+		trigger_if = {
+			limit = {owner ?= {has_law = law_type:law_protected_speech}}
+			owner ?= {
+				authority >= 100
+			}
+		}
+		trigger_else_if = {
+			limit = {owner ?= {has_law = law_type:law_right_of_assembly }}
+			owner ?= {
+				authority >= 75
+			}
+		}
+		trigger_else_if = {
+			limit = {owner ?= {has_law = law_type:law_censorship }}
+			owner ?= {
+				authority >= 50
+			}
+		}
+		trigger_else = {
+			owner ?= {
+				authority >= 25
+			}
+		}
+		custom_tooltip = {
+			text = stts_no_current_press_tour
+			NOR = {
+				has_modifier = stts_character_smear_campaign_modifier
+				has_modifier = stts_character_press_tour_modifier
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = stts_character_press_tour_modifier
+			years = 10
+			is_decaying = yes
+		}
+		interest_group = {
+			add_modifier = {
+				name = stts_ig_press_tour_modifier
+				years = 5
+			}
+		}
+		if = {
+			limit = {owner ?= {has_law = law_type:law_protected_speech}}
+			owner = {
+				add_modifier = {
+					name = stts_press_authority_modifier
+					years = 5
+					multiplier = 4
+				}
+			}
+		}
+		else_if = {
+			limit = {owner ?= {has_law = law_type:law_right_of_assembly}}
+			owner = {
+				add_modifier = {
+					name = stts_press_authority_modifier
+					years = 5
+					multiplier = 3
+				}
+			}
+		}
+		else_if = {
+			limit = {owner ?= {has_law = law_type:law_censorship}}
+			owner = {
+				add_modifier = {
+					name = stts_press_authority_modifier
+					years = 5
+					multiplier = 2
+				}
+			}
+		}
+		else = {
+			owner = {
+				add_modifier = {
+					name = stts_press_authority_modifier
+					years = 5
+					multiplier = 1
+				}
+			}
+		}
+
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}
+
+stts_smear_campaign = {
+	icon = "gfx/interface/icons/generic_icons/ig_suppress.dds"
+	clicksound = "event:/SFX/UI/Global/suppress"
+
+	potential = {
+		age >= define:NCharacters|ADULT_AGE
+		owner = {
+			exists = this
+			has_technology_researched = mass_communication
+		}
+		is_ruler = no
+	}
+
+	possible = {
+		owner ?= {
+			NOT = {
+				has_law = law_type:law_protected_speech
+			}
+		}
+		trigger_if = {
+			limit = {owner ?= {has_law = law_type:law_protected_speech}}
+			owner ?= {
+				authority >= 100
+			}
+		}
+		trigger_else_if = {
+			limit = {owner ?= {has_law = law_type:law_right_of_assembly }}
+			owner ?= {
+				authority >= 75
+			}
+		}
+		trigger_else_if = {
+			limit = {owner ?= {has_law = law_type:law_censorship }}
+			owner ?= {
+				authority >= 50
+			}
+		}
+		trigger_else = {
+			owner ?= {
+				authority >= 25
+			}
+		}
+		custom_tooltip = {
+			text = stts_no_current_press_tour
+			NOR = {
+				has_modifier = stts_character_smear_campaign_modifier
+				has_modifier = stts_character_press_tour_modifier
+			}
+		}
+		NAND = {
+			interest_group = {
+				is_in_government = yes
+				leader = prev
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = stts_character_smear_campaign_modifier
+			years = 10
+			is_decaying = yes
+		}
+		interest_group = {
+			add_modifier = {
+				name = stts_ig_smear_campaign_modifier
+				years = 5
+			}
+		}
+		if = {
+			limit = {owner ?= {has_law = law_type:law_protected_speech}}
+			owner = {
+				add_modifier = {
+					name = stts_press_authority_modifier
+					years = 5
+					multiplier = 4
+				}
+			}
+		}
+		else_if = {
+			limit = {owner ?= {has_law = law_type:law_right_of_assembly}}
+			owner = {
+				add_modifier = {
+					name = stts_press_authority_modifier
+					years = 5
+					multiplier = 3
+				}
+			}
+		}
+		else_if = {
+			limit = {owner ?= {has_law = law_type:law_censorship}}
+			owner = {
+				add_modifier = {
+					name = stts_press_authority_modifier
+					years = 5
+					multiplier = 2
+				}
+			}
+		}
+		else = {
+			owner = {
+				add_modifier = {
+					name = stts_press_authority_modifier
+					years = 5
+					multiplier = 1
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}
+
+stts_found_movement = {
+	icon = "gfx/interface/icons/political_movement_icons/political_activism.dds"
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/character_invite"
+
+	potential = {
+		owner = {
+			exists = this
+			has_technology_researched = mass_communication
+		}
+		age >= define:NCharacters|ADULT_AGE
+		OR = {
+			has_ideology = ideology:ideology_abolitionist
+			has_ideology = ideology:ideology_land_reformer
+			has_ideology = ideology:ideology_radical
+			has_ideology = ideology:ideology_corporatist_leader
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_utopian
+			has_ideology = ideology:ideology_social_democrat
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_atheist
+			has_ideology = ideology:ideology_feminist
+			has_ideology = ideology:ideology_market_liberal
+			has_ideology = ideology:ideology_liberal_leader
+			has_ideology = ideology:ideology_vanguardist
+			has_ideology = ideology:ideology_republican_leader
+			has_ideology = ideology:ideology_positivist
+		}
+		owner = {
+			NOR = {
+				has_journal_entry = je_divided_monarchists
+				has_journal_entry = je_acw_countdown
+			}
+			is_revolutionary = no
+		}
+	}
+
+	possible = {
+		popularity > 0
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_abolitionist
+			}
+			owner = {
+				NOT = { has_law = law_type:law_slavery_banned }
+				has_technology_researched = empiricism
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_anti_slavery
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_land_reformer
+			}
+			owner = {
+				has_technology_researched = enclosure
+				NOR = {
+					has_law = law_type:law_homesteading
+					has_law = law_type:law_collectivized_agriculture
+				}
+				pop_type_percent_country = {
+					pop_type = peasants
+					percent > 0.25
+				}
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_land_reform
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_radical
+			}
+			owner = {
+				has_technology_researched = egalitarianism
+				NOR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_council_republic
+					has_law = law_type:law_corporate_state
+				}
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_radical
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_corporatist_leader
+			}
+			owner = {
+				has_technology_researched = corporatism
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_corporatist
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_fascist
+			}
+			owner = {
+				has_technology_researched = political_agitation
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_fascist
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+				}
+			}
+			owner = {
+				has_technology_researched = socialism
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_communist
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_utopian
+					has_ideology = ideology:ideology_social_democrat
+				}
+			}
+			owner = {
+				has_technology_researched = socialism
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_socialist
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_anarchist
+			}
+			owner = {
+				has_technology_researched = anarchism
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_anarchist
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_feminist
+			}
+			owner = {
+				has_technology_researched = feminism
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_feminist
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_atheist
+			}
+			owner = {
+				has_technology_researched = realism
+				NAND = {
+					has_technology_researched = anarchism
+					has_technology_researched = socialism
+				}
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_nihilist
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_positivist
+			}
+			owner = {
+				has_global_variable = positivism_invented
+				has_technology_researched = empiricism
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_positivist
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_liberal_leader
+					has_ideology = ideology:ideology_market_liberal
+					has_ideology = ideology:ideology_republican_leader
+				}
+			}
+			owner = {
+				has_technology_researched = democracy
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_liberal
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { has_ideology = ideology:ideology_abolitionist }
+			owner = {
+				create_political_movement = {
+					type = movement_anti_slavery
+				}
+			}
+		} else_if = {
+			limit = { has_ideology = ideology:ideology_land_reformer }
+			owner = {
+				create_political_movement = {
+					type = movement_land_reform
+				}
+			}
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_radical }
+			owner = {
+				create_political_movement = {
+					type = movement_radical
+				}
+			}
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_corporatist_leader }
+			owner = {
+				create_political_movement = {
+					type = movement_corporatist
+				}
+			}
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_fascist }
+			owner = {
+				create_political_movement = {
+					type = movement_fascist
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+				}
+			}
+			owner = {
+				create_political_movement = {
+					type = movement_communist
+				}
+			}
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_social_democrat }
+			owner = {
+				create_political_movement = {
+					type = movement_socialist
+				}
+			}
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_anarchist }
+			owner = {
+				create_political_movement = {
+					type = movement_anarchist
+				}
+			}
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_feminist }
+			owner = {
+				create_political_movement = {
+					type = movement_feminist
+				}
+			}
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_atheist }
+			owner = {
+				create_political_movement = {
+					type = movement_nihilist
+				}
+			}
+		}
+		else_if = {
+			limit = { has_ideology = ideology:ideology_positivist }
+			owner = {
+				create_political_movement = {
+					type = movement_positivist
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_ideology = ideology:ideology_liberal_leader
+					has_ideology = ideology:ideology_market_liberal
+					has_ideology = ideology:ideology_republican_leader
+				}
+			 }
+			owner = {
+				create_political_movement = {
+					type = movement_liberal
+				}
+			}
+		}
+	}
+
+	cooldown = { days = normal_modifier_time }
+
+	ai_chance = {
+		value = 1000
+	}
+}
+
+stts_spread_social_idea = {
+	icon = "gfx/interface/icons/generic_icons/innovation.dds"
+	clicksound = "event:/SFX/UI/SubjectInteractions/subject_button_medium_subject"
+
+	potential = {
+		owner = {
+			exists = this
+			AND = {
+				has_technology_researched = mass_communication
+				has_technology_researched = academia
+			}
+		}
+		age >= define:NCharacters|ADULT_AGE
+		OR = {
+			has_ideology = ideology:ideology_abolitionist
+			has_ideology = ideology:ideology_land_reformer
+			has_ideology = ideology:ideology_radical
+			has_ideology = ideology:ideology_corporatist_leader
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_social_democrat
+			has_ideology = ideology:ideology_utopian
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_atheist
+			has_ideology = ideology:ideology_feminist
+			has_ideology = ideology:ideology_market_liberal
+			has_ideology = ideology:ideology_liberal_leader
+			has_ideology = ideology:ideology_vanguardist
+			has_ideology = ideology:ideology_republican_leader
+			has_ideology = ideology:ideology_positivist
+			has_ideology = ideology:ideology_humanitarian
+			has_ideology = ideology:ideology_humanitarian_royalist
+		}
+	}
+
+	possible = {
+		trigger_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_abolitionist
+				}
+			}
+			owner = {
+				OR = {
+					can_research = democracy
+					can_research = egalitarianism
+					can_research = human_rights
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_corporatist_leader
+			}
+			owner = {
+				can_research = corporatism
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_fascist
+			}
+			owner = {
+				can_research = political_agitation
+			}
+		}
+		trigger_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+				}
+			}
+			owner = {
+				OR = {
+					can_research = labor_movement
+					can_research = socialism
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_utopian
+					has_ideology = ideology:ideology_social_democrat
+				}		
+			}
+			owner = {
+				OR = {
+					can_research = egalitarianism
+					can_research = labor_movement
+					can_research = socialism
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_anarchist
+			}
+			owner = {
+				has_technology_researched = anarchism
+				OR = {
+					can_research = egalitarianism
+					can_research = labor_movement
+					can_research = anarchism
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_feminist
+					has_ideology = ideology:ideology_humanitarian
+					has_ideology = ideology:ideology_humanitarian_royalist
+				}
+			}
+			owner = {
+				OR = {
+					can_research = egalitarianism
+					can_research = human_rights
+					can_research = feminism
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_atheist
+			}
+			owner = {
+				can_research = realism
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_ideology = ideology:ideology_positivist
+			}
+			owner = {
+				can_research = empiricism
+			}
+		}
+		trigger_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_liberal_leader
+					has_ideology = ideology:ideology_market_liberal
+					has_ideology = ideology:ideology_republican_leader
+				}
+			}
+			owner = {
+				OR = {
+					can_research = democracy
+					can_research = egalitarianism
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { 
+				OR = {
+					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_abolitionist
+				}
+			}
+			owner = {
+				stts_tech_progress = {TECHNOLOGY = democracy}
+				stts_tech_progress = {TECHNOLOGY = egalitarianism}
+				stts_tech_progress = {TECHNOLOGY = human_rights}
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_corporatist_leader
+			}
+			owner = {
+				stts_tech_progress = {
+					TECHNOLOGY = corporatism
+				}
+			}
+		}
+		else_if = {
+			limit = {has_ideology = ideology:ideology_fascist}
+			owner = {stts_tech_progress = {TECHNOLOGY = political_agitation}}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+				}
+			}
+			owner = {
+				stts_tech_progress = {TECHNOLOGY = labor_movement}
+				stts_tech_progress = {TECHNOLOGY = socialism}
+			}
+		}
+		else_if = {
+			limit = {has_ideology = ideology:ideology_social_democrat}
+			owner = {
+				stts_tech_progress = {TECHNOLOGY = egalitarianism}
+				stts_tech_progress = {TECHNOLOGY = labor_movement}
+				stts_tech_progress = {TECHNOLOGY = socialism}
+			}
+		}
+		else_if = {
+			limit = {has_ideology = ideology:ideology_anarchist}
+			owner = {
+				stts_tech_progress = {TECHNOLOGY = egalitarianism}
+				stts_tech_progress = {TECHNOLOGY = labor_movement}
+				stts_tech_progress = {TECHNOLOGY = anarchism}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_feminist
+					has_ideology = ideology:ideology_humanitarian
+					has_ideology = ideology:ideology_humanitarian_royalist
+				}
+			}
+			owner = {
+				stts_tech_progress = {TECHNOLOGY = egalitarianism}
+				stts_tech_progress = {TECHNOLOGY = human_rights}
+				stts_tech_progress = {TECHNOLOGY = feminism}
+			}
+		}
+		else_if = {
+			limit = {has_ideology = ideology:ideology_atheist}
+			owner = {
+				stts_tech_progress = {TECHNOLOGY = realism}
+			}
+		}
+		else_if = {
+			limit = {has_ideology = ideology:ideology_positivist}
+			owner = {
+				stts_tech_progress = {TECHNOLOGY = empiricism}
+			}
+		}
+		else_if = {
+			limit = {				
+				OR = {
+					has_ideology = ideology:ideology_liberal_leader
+					has_ideology = ideology:ideology_market_liberal
+					has_ideology = ideology:ideology_republican_leader
+				}
+			}
+			owner = {
+				stts_tech_progress = {TECHNOLOGY = democracy}
+				stts_tech_progress = {TECHNOLOGY = egalitarianism}
+			}
+		}
+	}
+
+	cooldown = { days = normal_modifier_time }
+
+	ai_chance = {
+		value = 1000
+	}
+}

@@ -1,0 +1,25 @@
+namespace = tts_cheats
+
+tts_cheats.1 = {
+	type = country_event
+	hidden = yes
+	
+	immediate = {
+		# capital = {
+		# 	create_building = {
+		# 		building = tts_cheat_building
+		# 		level = 1
+		# 	}
+		# }
+		add_technology_researched = screw_frigate
+		add_technology_researched = ironclad_tech
+		add_technology_researched = predreadnought_tech
+		add_technology_researched = dreadnought
+		add_technology_researched = battleship_tech
+		add_technology_researched = destroyer
+		add_technology_researched = sea_lane_strategies
+		add_technology_researched = carrier_tech
+		add_technology_researched = fleet_carrier_tech
+		add_technology_researched = armored_carrier_tech
+	}
+}

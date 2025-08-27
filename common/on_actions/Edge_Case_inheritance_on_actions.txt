@@ -1,0 +1,329 @@
+﻿## This is the old code, kept in here for compatibility and as a failsafe ##
+
+on_country_formed = {
+	on_actions = {
+		EC_inheritance_check_on_actions
+	}
+}
+
+EC_inheritance_check_on_actions = {
+
+	effect = {
+		
+		## HRE Edge Cases ##
+		
+		if = {
+			limit = {
+				c:HRE ?= THIS
+				was_formed_from = KUK
+			}
+			add_primary_culture = cu:hungarian
+			add_primary_culture = cu:romanian
+			add_primary_culture = cu:croat
+			add_primary_culture = cu:slovak
+		}
+		
+		if = {
+			limit = {
+				c:HRE ?= THIS
+				was_formed_from = YUG
+			}
+			add_primary_culture = cu:serb
+			add_primary_culture = cu:croat
+			add_primary_culture = cu:bosniak
+		}
+		
+		if = {
+			limit = {
+				c:HRE ?= THIS
+				was_formed_from = FRA
+			}
+			add_primary_culture = cu:french
+			add_primary_culture = cu:wallonian
+			add_primary_culture = cu:breton
+			add_primary_culture = cu:occitan
+			add_primary_culture = cu:francoprovencal
+		}
+		
+		if = {
+			limit = {
+				c:HRE ?= THIS
+				was_formed_from = ITA
+			}
+			add_primary_culture = cu:south_italian
+		}
+		
+		if = {
+			limit = {
+				c:HRE ?= THIS
+				was_formed_from = SCH
+			}
+			add_primary_culture = cu:danish
+		}
+		
+		if = {
+			limit = {
+				c:HRE ?= THIS
+				was_formed_from = SWI
+			}
+			add_primary_culture = cu:francoprovencal
+		}
+		
+		if = {
+			limit = {
+				c:HRE ?= THIS
+				was_formed_from = SCA
+			}
+			add_primary_culture = cu:swedish
+			add_primary_culture = cu:danish
+			add_primary_culture = cu:norwegian
+			add_primary_culture = cu:icelandic
+		}
+		
+		if = {
+			limit = {
+				c:HRE ?= THIS
+				was_formed_from = CZH
+			}
+			add_primary_culture = cu:slovak
+		}
+		
+		## Ethiopia ##
+		
+		if = {
+			limit = {
+				c:ETH ?= THIS
+				was_formed_from = HAR
+			}
+			add_primary_culture = cu:somali
+		}
+		
+		if = {
+			limit = {
+				c:ETH ?= THIS
+				was_formed_from = BRN
+			}
+			add_primary_culture = cu:sidama
+		}
+		
+		if = {
+			limit = {
+				c:ETH ?= THIS
+				was_formed_from = KFA
+			}
+			add_primary_culture = cu:sidama
+		}
+		
+		if = {
+			limit = {
+				c:ETH ?= THIS
+				was_formed_from = SDM
+			}
+			add_primary_culture = cu:sidama
+		}
+		
+		if = {
+			limit = {
+				c:ETH ?= THIS
+				was_formed_from = AWS
+			}
+			add_primary_culture = cu:afar
+		}
+		
+		## Afghanistan ##
+		
+		if = {
+			limit = {
+				c:TRH ?= THIS
+				was_formed_from = AFG
+			}
+			add_primary_culture = cu:pashtun
+		}
+		
+		if = {
+			limit = {
+				c:PAK ?= THIS
+				was_formed_from = AFG
+			}
+			add_primary_culture = cu:tajik
+		}
+		
+		if = {
+			limit = {
+				c:BHT ?= THIS
+				was_formed_from = AFG
+			}
+			add_primary_culture = cu:tajik
+		}
+		
+		## Luxembourg ##
+		
+		if = {
+			limit = {
+				c:UNL ?= THIS
+				was_formed_from = LUX
+			}
+			add_primary_culture = cu:north_german
+		}
+		
+		if = {
+			limit = {
+				c:GER ?= THIS
+				was_formed_from = LUX
+			}
+			add_primary_culture = cu:wallonian
+		}
+		
+		if = {
+			limit = {
+				c:NGF ?= THIS
+				was_formed_from = LUX
+			}
+			add_primary_culture = cu:wallonian
+		}
+		
+		if = {
+			limit = {
+				c:RHN ?= THIS
+				was_formed_from = LUX
+			}
+			add_primary_culture = cu:wallonian
+		}
+		
+		if = {
+			limit = {
+				c:GER ?= THIS
+				was_formed_from = UNL
+			}
+			add_primary_culture = cu:dutch
+			add_primary_culture = cu:flemish
+			add_primary_culture = cu:wallonian
+		}
+		
+		## Schleswig ##
+		
+		if = {
+			limit = {
+				c:PRU ?= THIS
+				was_formed_from = SCH
+			}
+			add_primary_culture = cu:danish
+		}
+		
+		if = {
+			limit = {
+				c:GER ?= THIS
+				was_formed_from = SCH
+			}
+			add_primary_culture = cu:danish
+		}
+		
+		if = {
+			limit = {
+				c:NGF ?= THIS
+				was_formed_from = SCH
+			}
+			add_primary_culture = cu:danish
+		}
+		
+		if = {
+			limit = {
+				c:RHN ?= THIS
+				was_formed_from = SCH
+			}
+			add_primary_culture = cu:danish
+		}
+		
+		if = {
+			limit = {
+				c:SCA ?= THIS
+				was_formed_from = SCH
+			}
+			add_primary_culture = cu:north_german
+		}
+		
+		if = {
+			limit = {
+				c:SCA ?= THIS
+				was_formed_from = RHN
+			}
+			add_primary_culture = cu:south_german
+		}
+		
+		## Columbia District ##
+		
+		if = {
+			limit = {
+				c:CAN ?= THIS
+				was_formed_from = ORG
+			}
+			add_primary_culture = cu:yankee
+		}
+		
+		if = {
+			limit = {
+				c:FSA ?= THIS
+				was_formed_from = ORG
+			}
+			add_primary_culture = cu:anglo_canadian
+		}
+		
+		if = {
+			limit = {
+				c:USA ?= THIS
+				was_formed_from = ORG
+			}
+			add_primary_culture = cu:anglo_canadian
+		}
+		
+		
+		## Misc Edge Cases ##
+		
+		if = {
+			limit = {
+				c:IBE ?= THIS
+				was_formed_from = PHI
+			}
+			add_primary_culture = cu:filipino
+		}
+		
+		if = {
+			limit = {
+				c:IRE ?= THIS
+				was_formed_from = ULS
+			}
+			add_primary_culture = cu:scottish
+		}
+	
+	}
+}
+
+
+## Did you know that non-Germans can become the Confederation of the Rhine through journal entries? Did you know that they won't get North and South German as Primary Cultures? ##
+
+on_monthly_pulse_country = {
+	on_actions = {
+		EC_rhine_confederation_culture_check
+	}
+}
+
+EC_rhine_confederation_culture_check = {
+
+	effect = {
+		every_country = {
+			limit = {
+				exists = c:RHN
+				c:RHN = THIS
+				NOT = {
+					c:RHN = {
+						country_has_primary_culture = cu:north_german
+						country_has_primary_culture = cu:south_german
+					}
+				}
+			}
+			add_primary_culture = cu:north_german
+			add_primary_culture = cu:south_german
+		}
+	}
+	
+}

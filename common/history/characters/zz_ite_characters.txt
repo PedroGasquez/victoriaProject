@@ -1,0 +1,54 @@
+﻿# CHARACTERS = {
+# 	c:RUS = {
+# 		ruler = {
+# 			set_ideology = ideology:ideology_authoritarian
+# 		}
+# 	}
+# 	every_country = {
+# 		#Absolute Monarchs become Absolutists
+# 		if = {
+# 			limit = { 
+# 				has_law = law_type:law_monarchy
+# 				has_law = law_type:law_autocracy
+# 				ruler ?= {
+# 					OR = {
+# 						has_ideology = ideology:ideology_royalist
+# 						has_ideology = ideology:ideology_traditionalist
+# 						has_ideology = ideology:ideology_moderate
+# 					}
+# 					# is_historical = no
+# 				}
+# 				#except the italians
+# 				NOR = {
+# 					country_has_primary_culture = cu:north_italian
+# 					country_has_primary_culture = cu:south_italian
+# 				}
+# 			}
+# 			ruler = {
+# 				set_ideology = ideology:ite_ideology_absolutist
+# 			}
+# 		}
+# 		#ottomans should be Centralizers
+# 		if = {
+# 			limit = { 
+# 				c:TUR ?= this
+# 			}
+# 			ruler = {
+# 				set_ideology = ideology:vtm_ideology_modernizer
+# 			}
+# 			heir = {
+# 				set_ideology = ideology:vtm_ideology_modernizer
+# 			}
+# 			ig:ig_intelligentsia = {
+# 				leader = {
+# 					set_ideology = ideology:vtm_ideology_modernizer
+# 				}
+# 			}
+# 			ig:ig_armed_forces = {
+# 				leader = {
+# 					set_ideology = ideology:vtm_ideology_modernizer
+# 				}
+# 			}
+# 		}
+# 	}
+# }

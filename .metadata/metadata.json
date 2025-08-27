@@ -1,0 +1,20 @@
+{
+  "name" : "[1.9] Modpack Quarta Roma 2.0",
+	"id" : "",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [],
+  "relationships" : [
+    {
+      "rel_type" : "dependency",
+      "id" : "com.github.Victoria-3-Modding-Co-op.Community-Mod-Framework",
+      "display_name" : "Community Mod Framework",
+      "resource_type" : "mod",
+      "version" : ""
+    }
+  ],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
